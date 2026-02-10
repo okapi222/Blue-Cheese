@@ -1,0 +1,41 @@
+---
+description: Enforce MDS usage via @ui facade (no raw controls).
+alwaysApply: true
+---
+
+## MDS UI usage (project rule)
+
+### Golden rule
+- **In app code, never introduce raw interactive controls** like `<button>`, `<input>`, `<select>`, `<textarea>`.
+- Use components from **`@ui`** instead.
+
+### How to add UI
+- If a needed component doesn't exist, **create a wrapper in** `src/ui/` (this is the only place raw controls are allowed), then re-export it from `src/ui/index.ts`.
+- Keep wrappers thin so we can later swap to the real MDS NPM package without refactoring app code.
+
+### Imports
+- Prefer `import { Button } from '@ui'` (or `import { X } from '@ui'`) for all UI components.
+- Do not import UI components directly from other libraries unless explicitly asked.
+
+### Accessibility
+- Use semantic elements and accessible labels.
+- Ensure focus styles exist and `disabled` state is respected.
+
+### Examples
+
+```tsx
+// ✅ GOOD
+import { Button } from '@ui'
+
+export function SaveAction() {
+  return <Button type="submit">Save</Button>
+}
+```
+
+```tsx
+// ❌ BAD
+export function SaveAction() {
+  return <button type="submit">Save</button>
+}
+```
+

@@ -1,0 +1,140 @@
+---
+description: Banner and dashboard typography sizing standards
+alwaysApply: true
+---
+
+# MDS Banner and Dashboard Typography Sizing
+
+## Banner Typography
+
+### Application Name
+- **Size**: 1.5em
+- Use for the application/product name in banner headers
+
+```css
+.banner__app-name {
+  font-size: 1.5em;
+}
+```
+
+## Dashboard Typography
+
+### Page Title
+- **Size**: 2em
+- Use for the main dashboard page title
+- **Alignment**: Depends on layout position (see alignment rules below)
+
+```css
+.dashboard__title {
+  font-size: 2em;
+}
+```
+
+### Subtitle
+- **Size**: 1.2em
+- Use for dashboard subtitles and section descriptions
+- **Alignment**: Must match the title alignment
+
+```css
+.dashboard__subtitle {
+  font-size: 1.2em;
+}
+```
+
+### Title and Subtitle Alignment Rules
+
+**If title is centered on the page:**
+- Both title AND subtitle must be **center aligned**
+
+**If title is placed on the left:**
+- Both title AND subtitle must be **left aligned**
+
+```css
+/* Centered layout */
+.dashboard__title-section--center {
+  text-align: center;
+}
+
+.dashboard__title-section--center .dashboard__title,
+.dashboard__title-section--center .dashboard__subtitle {
+  text-align: center;
+}
+
+/* Left-aligned layout */
+.dashboard__title-section--left {
+  text-align: left;
+}
+
+.dashboard__title-section--left .dashboard__title,
+.dashboard__title-section--left .dashboard__subtitle {
+  text-align: left;
+}
+```
+
+### Full-Screen Width Widget Title
+- **Size**: 1.4em
+- Use for titles of widgets that span the full width of the screen
+
+```css
+.dashboard-widget--full-width .widget__title {
+  font-size: 1.4em;
+}
+```
+
+## Examples
+
+### ✅ GOOD - Banner with Application Name
+
+```tsx
+<header className="banner">
+  <h1 style={{ fontSize: '1.5em' }}>MyApp Dashboard</h1>
+</header>
+```
+
+### ✅ GOOD - Dashboard with Centered Title and Subtitle
+
+```tsx
+<div className="dashboard">
+  <div className="dashboard__title-section" style={{ textAlign: 'center' }}>
+    <h1 style={{ fontSize: '2em', textAlign: 'center' }}>Analytics Overview</h1>
+    <p style={{ fontSize: '1.2em', textAlign: 'center' }}>Key metrics and insights</p>
+  </div>
+  
+  <div className="widget widget--full-width">
+    <h2 style={{ fontSize: '1.4em' }}>Revenue Trends</h2>
+  </div>
+</div>
+```
+
+### ✅ GOOD - Dashboard with Left-Aligned Title and Subtitle
+
+```tsx
+<div className="dashboard">
+  <div className="dashboard__title-section" style={{ textAlign: 'left' }}>
+    <h1 style={{ fontSize: '2em', textAlign: 'left' }}>Analytics Overview</h1>
+    <p style={{ fontSize: '1.2em', textAlign: 'left' }}>Key metrics and insights</p>
+  </div>
+  
+  <div className="widget widget--full-width">
+    <h2 style={{ fontSize: '1.4em' }}>Revenue Trends</h2>
+  </div>
+</div>
+```
+
+### ❌ BAD - Inconsistent Sizing
+
+```tsx
+<div className="dashboard">
+  <h1 style={{ fontSize: '1.8em' }}>Analytics</h1> {/* Should be 2em */}
+  <p style={{ fontSize: '1em' }}>Metrics</p> {/* Should be 1.2em */}
+</div>
+```
+
+### ❌ BAD - Mismatched Alignment
+
+```tsx
+<div className="dashboard">
+  <h1 style={{ fontSize: '2em', textAlign: 'center' }}>Analytics Overview</h1>
+  <p style={{ fontSize: '1.2em', textAlign: 'left' }}>Key metrics</p> {/* Should be center aligned */}
+</div>
+```

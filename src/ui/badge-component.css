@@ -1,0 +1,114 @@
+/* Badge base styles */
+.ui-Badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--mds-badge-border-radius);
+  font-family: var(--mds-badge-font-family);
+  font-weight: var(--mds-badge-font-weight);
+  border-style: solid;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* Badge sizes */
+.ui-Badge--sm {
+  height: var(--mds-badge-size-sm-height);
+  padding: var(--mds-badge-size-sm-padding-y) var(--mds-badge-size-sm-padding-x);
+  font-size: var(--mds-badge-size-sm-font-size);
+  line-height: var(--mds-badge-size-sm-line-height);
+}
+
+.ui-Badge--md {
+  height: var(--mds-badge-size-md-height);
+  padding: var(--mds-badge-size-md-padding-y) var(--mds-badge-size-md-padding-x);
+  font-size: var(--mds-badge-size-md-font-size);
+  line-height: var(--mds-badge-size-md-line-height);
+}
+
+.ui-Badge--lg {
+  height: var(--mds-badge-size-lg-height);
+  padding: var(--mds-badge-size-lg-padding-y) var(--mds-badge-size-lg-padding-x);
+  font-size: var(--mds-badge-size-lg-font-size);
+  line-height: var(--mds-badge-size-lg-line-height);
+}
+
+/* Info variant - filled */
+.ui-Badge--info-filled {
+  background: var(--mds-badge-text-info-filled-background);
+  color: var(--mds-badge-text-info-filled-text);
+  border-width: var(--mds-badge-border-width-filled);
+  border-color: var(--mds-badge-text-info-filled-border);
+}
+
+/* Info variant - outlined */
+.ui-Badge--info-outlined {
+  background: var(--mds-badge-text-info-outlined-background);
+  color: var(--mds-badge-text-info-outlined-text);
+  border-width: var(--mds-badge-border-width-outlined);
+  border-color: var(--mds-badge-text-info-outlined-border);
+}
+
+/* Success variant - filled */
+.ui-Badge--success-filled {
+  background: var(--mds-badge-text-success-filled-background);
+  color: var(--mds-badge-text-success-filled-text);
+  border-width: var(--mds-badge-border-width-filled);
+  border-color: var(--mds-badge-text-success-filled-border);
+}
+
+/* Success variant - outlined */
+.ui-Badge--success-outlined {
+  background: var(--mds-badge-text-success-outlined-background);
+  color: var(--mds-badge-text-success-outlined-text);
+  border-width: var(--mds-badge-border-width-outlined);
+  border-color: var(--mds-badge-text-success-outlined-border);
+}
+
+/* Warning variant - filled */
+.ui-Badge--warning-filled {
+  background: var(--mds-badge-text-warning-filled-background);
+  color: var(--mds-badge-text-warning-filled-text);
+  border-width: var(--mds-badge-border-width-filled);
+  border-color: var(--mds-badge-text-warning-filled-border);
+}
+
+/* Warning variant - outlined */
+.ui-Badge--warning-outlined {
+  background: var(--mds-badge-text-warning-outlined-background);
+  color: var(--mds-badge-text-warning-outlined-text);
+  border-width: var(--mds-badge-border-width-outlined);
+  border-color: var(--mds-badge-text-warning-outlined-border);
+}
+
+/* Error variant - filled */
+.ui-Badge--error-filled {
+  background: var(--mds-badge-text-error-filled-background);
+  color: var(--mds-badge-text-error-filled-text);
+  border-width: var(--mds-badge-border-width-filled);
+  border-color: var(--mds-badge-text-error-filled-border);
+}
+
+/* Error variant - outlined */
+.ui-Badge--error-outlined {
+  background: var(--mds-badge-text-error-outlined-background);
+  color: var(--mds-badge-text-error-outlined-text);
+  border-width: var(--mds-badge-border-width-outlined);
+  border-color: var(--mds-badge-text-error-outlined-border);
+}
+
+/* Neutral variant - filled */
+.ui-Badge--neutral-filled {
+  background: var(--mds-badge-text-neutral-filled-background);
+  color: var(--mds-badge-text-neutral-filled-text);
+  border-width: var(--mds-badge-border-width-filled);
+  border-color: var(--mds-badge-text-neutral-filled-border);
+}
+
+/* Neutral variant - outlined */
+.ui-Badge--neutral-outlined {
+  background: var(--mds-badge-text-neutral-outlined-background);
+  color: var(--mds-badge-text-neutral-outlined-text);
+  border-width: var(--mds-badge-border-width-outlined);
+  border-color: var(--mds-badge-text-neutral-outlined-border);
+}

@@ -1,0 +1,100 @@
+/**
+ * Navigation Component Styles
+ * Uses MDS tokens for consistent styling
+ */
+
+.app-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background: var(--mds-color-white);
+  border-right: 1px solid var(--mds-color-border-default);
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.app-navigation__header {
+  padding: 24px 20px;
+  border-bottom: 1px solid var(--mds-color-border-default);
+}
+
+.app-navigation__title {
+  font-family: var(--mds-font-body);
+  font-weight: var(--mds-font-weight-bold);
+  font-size: 1.5em; /* Banner application name */
+  color: var(--mds-color-text-headings);
+  margin: 0;
+}
+
+.app-navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 12px 0;
+}
+
+.app-navigation__item {
+  margin: 0;
+}
+
+.app-navigation__link {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: var(--mds-color-text-default);
+  transition: background-color 150ms ease-in-out;
+  border-left: 3px solid transparent;
+}
+
+.app-navigation__link:hover {
+  background: var(--mds-color-neutral-5);
+}
+
+.app-navigation__link--active {
+  background: var(--mds-color-electric-blue-5);
+  border-left-color: var(--mds-color-electric-blue-500);
+}
+
+.app-navigation__link--active .app-navigation__label {
+  color: var(--mds-color-electric-blue-500);
+  font-weight: var(--mds-font-weight-medium);
+}
+
+.app-navigation__label {
+  display: block;
+  font-family: var(--mds-font-body);
+  font-weight: var(--mds-font-weight-medium);
+  font-size: var(--mds-font-size-body-sm);
+  line-height: var(--mds-line-height-body-sm);
+  margin-bottom: 4px;
+}
+
+.app-navigation__description {
+  display: block;
+  font-family: var(--mds-font-body);
+  font-weight: var(--mds-font-weight-regular);
+  font-size: var(--mds-font-size-body-xs);
+  line-height: var(--mds-line-height-body-xs);
+  color: var(--mds-color-text-subtle);
+}
+
+.app-content {
+  margin-left: 280px;
+  min-height: 100vh;
+  background: var(--mds-color-neutral-2);
+}
+
+@media (max-width: 768px) {
+  .app-navigation {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid var(--mds-color-border-default);
+  }
+
+  .app-content {
+    margin-left: 0;
+  }
+}

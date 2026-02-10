@@ -1,0 +1,49 @@
+/**
+ * Breadcrumb Component Styles
+ * Uses MDS breadcrumb tokens from src/styles/mds/breadcrumb.tokens.css
+ */
+
+.ui-Breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--mds-breadcrumb-gap);
+  font-family: var(--mds-breadcrumb-font-family);
+  font-weight: var(--mds-breadcrumb-font-weight);
+  font-size: var(--mds-breadcrumb-font-size);
+  line-height: var(--mds-breadcrumb-line-height);
+  flex-wrap: wrap;
+}
+
+.ui-Breadcrumb__item {
+  display: flex;
+  align-items: center;
+  gap: var(--mds-breadcrumb-gap);
+}
+
+.ui-Breadcrumb__link {
+  color: var(--mds-breadcrumb-text-muted);
+  text-decoration: none;
+  transition: color 150ms ease-in-out;
+  cursor: pointer;
+}
+
+.ui-Breadcrumb__link:hover {
+  color: var(--mds-breadcrumb-text);
+  text-decoration: underline;
+}
+
+.ui-Breadcrumb__link:focus-visible {
+  outline: 2px solid var(--mds-color-electric-blue-500);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.ui-Breadcrumb__current {
+  color: var(--mds-breadcrumb-text);
+  font-weight: var(--mds-font-weight-medium);
+}
+
+.ui-Breadcrumb__separator {
+  color: var(--mds-breadcrumb-separator);
+  user-select: none;
+}

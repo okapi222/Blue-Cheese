@@ -1,0 +1,49 @@
+/**
+ * Select Component Styles
+ * Uses MDS select tokens from src/styles/mds/select.tokens.css
+ */
+
+.ui-Select {
+  /* Typography */
+  font-family: var(--mds-font-body);
+  font-size: var(--mds-font-size-body-sm);
+  font-weight: var(--mds-font-weight-regular);
+  line-height: var(--mds-line-height-body-sm);
+  
+  /* Colors */
+  color: var(--mds-color-text-default);
+  background-color: var(--mds-color-white);
+  border: 1px solid var(--mds-color-border-default);
+  
+  /* Spacing */
+  padding: 8px 32px 8px 12px;
+  min-height: 40px;
+  
+  /* Appearance */
+  border-radius: 4px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3e%3cpath fill='%23333333' d='M6 8L0 0h12z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+  
+  /* Transition */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ui-Select:hover {
+  border-color: var(--mds-color-border-hover);
+}
+
+.ui-Select:focus {
+  outline: none;
+  border-color: var(--mds-color-electric-blue-500);
+  box-shadow: 0 0 0 3px rgba(34, 81, 255, 0.1);
+}
+
+.ui-Select:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  background-color: var(--mds-color-background-subtle);
+}

@@ -1,0 +1,127 @@
+---
+description: Data visualization and chart styling guidelines
+alwaysApply: true
+---
+
+# MDS Data Visualization Guidelines
+
+## Chart and Graph Styling
+
+### Solid Colors Only
+- **All bar charts and graphical representations must use solid colors**
+- **NO gradients, fades, or color transitions**
+- Use flat, solid fills for all data visualization elements
+
+## Color Rules
+
+### Bar Charts
+```css
+/* ✅ GOOD - Solid color */
+.bar-chart__bar {
+  background-color: var(--mds-color-electric-blue-500);
+  fill: var(--mds-color-electric-blue-500);
+}
+
+/* ❌ BAD - Gradient/fade */
+.bar-chart__bar {
+  background: linear-gradient(to top, #2251FF, #5B7FFF);
+}
+```
+
+### Data Visualization Elements
+```css
+/* ✅ GOOD - Solid fills */
+.chart-area {
+  fill: var(--mds-color-marine-green-500);
+}
+
+.chart-line {
+  stroke: var(--mds-color-electric-blue-500);
+  fill: none; /* Lines don't have fill */
+}
+
+/* ❌ BAD - Gradient fills */
+.chart-area {
+  fill: url(#gradient);
+}
+```
+
+## Examples
+
+### ✅ GOOD - Solid Color Bar Chart
+
+```tsx
+<svg>
+  <rect 
+    x="10" 
+    y="20" 
+    width="30" 
+    height="100"
+    fill="var(--mds-color-electric-blue-500)" 
+  />
+  <rect 
+    x="50" 
+    y="40" 
+    width="30" 
+    height="80"
+    fill="var(--mds-color-marine-green-500)" 
+  />
+</svg>
+```
+
+### ✅ GOOD - Solid Color CSS Chart
+
+```css
+.revenue-bar {
+  background-color: var(--mds-color-electric-blue-500);
+  height: 150px;
+}
+
+.expense-bar {
+  background-color: var(--mds-color-crimson-red-500);
+  height: 80px;
+}
+```
+
+### ❌ BAD - Gradient Chart
+
+```css
+.revenue-bar {
+  background: linear-gradient(180deg, #2251FF 0%, #5B7FFF 100%);
+}
+
+.pie-slice {
+  fill: url(#radialGradient);
+}
+```
+
+### ❌ BAD - Fade/Opacity Transitions
+
+```css
+.area-chart {
+  fill: var(--mds-color-electric-blue-500);
+  opacity: 0.7; /* Avoid opacity on fills */
+}
+
+.bar-chart__bar {
+  background: rgba(34, 81, 255, 0.8); /* Use solid color instead */
+}
+```
+
+## Allowed Visualization Types
+
+All chart types must use solid colors:
+- Bar charts (horizontal and vertical)
+- Column charts
+- Pie charts
+- Donut charts
+- Area charts (solid fill)
+- Line charts (solid stroke)
+- Scatter plots (solid points)
+
+## Notes
+
+- Use MDS color tokens for consistency
+- Different data series should use different solid colors from the MDS palette
+- Hover states may use opacity changes on the entire element, but base colors remain solid
+- Borders and outlines should also be solid colors

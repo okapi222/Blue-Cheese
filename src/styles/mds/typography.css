@@ -1,0 +1,74 @@
+/**
+ * MDS Design Tokens - Typography
+ * Extracted from Figma: MDS Foundations / Typography
+ * https://www.figma.com/design/UTyJwVVwPjs9rQwTgxRqFU/MDS-Foundations?node-id=5-133
+ */
+
+:root {
+  /* ============================================
+     FONT FAMILIES
+     ============================================ */
+  --mds-font-display: "Bower", serif;
+  --mds-font-body: "McKinsey Sans", sans-serif;
+
+  /* ============================================
+     FONT WEIGHTS
+     ============================================ */
+  --mds-font-weight-light: 300;
+  --mds-font-weight-regular: 400;
+  --mds-font-weight-medium: 500;
+  --mds-font-weight-bold: 700;
+
+  /* ============================================
+     FONT SIZES
+     ============================================ */
+  /* Display sizes */
+  --mds-font-size-display-1: 4rem; /* 64px */
+  --mds-font-size-display-2: 3.75rem; /* 60px */
+  --mds-font-size-display-3: 3.5rem; /* 56px */
+  --mds-font-size-display-4: 3.25rem; /* 52px */
+  --mds-font-size-display-5: 3rem; /* 48px */
+  --mds-font-size-display-6: 2.75rem; /* 44px */
+
+  /* Heading sizes */
+  --mds-font-size-heading-1: 2.75rem; /* 44px */
+  --mds-font-size-heading-2: 2.5rem; /* 40px */
+  --mds-font-size-heading-3: 2.25rem; /* 36px */
+  --mds-font-size-heading-4: 2rem; /* 32px */
+  --mds-font-size-heading-5: 1.75rem; /* 28px */
+  --mds-font-size-heading-6: 1.5rem; /* 24px */
+
+  /* Body sizes */
+  --mds-font-size-body-xl: 1.5rem; /* 24px */
+  --mds-font-size-body-lg: 1.25rem; /* 20px */
+  --mds-font-size-body-md: 1.125rem; /* 18px */
+  --mds-font-size-body-sm: 1rem; /* 16px */
+  --mds-font-size-body-xs: 0.875rem; /* 14px */
+
+  /* ============================================
+     LINE HEIGHTS
+     ============================================ */
+  /* Display line heights */
+  --mds-line-height-display-1: 76px;
+  --mds-line-height-display-2: 72px;
+  --mds-line-height-display-3: 68px;
+  --mds-line-height-display-4: 64px;
+  --mds-line-height-display-5: 56px;
+  --mds-line-height-display-6: 52px;
+
+  /* Heading line heights */
+  --mds-line-height-heading-1: 52px;
+  --mds-line-height-heading-2: 48px;
+  --mds-line-height-heading-3: 44px;
+  --mds-line-height-heading-4: 36px;
+  --mds-line-height-heading-5: 32px;
+  --mds-line-height-heading-6: 28px;
+
+  /* Body line heights */
+  --mds-line-height-body-xl: 36px;
+  --mds-line-height-body-lg: 32px;
+  --mds-line-height-body-md: 28px;
+  --mds-line-height-body-sm: 24px;
+  --mds-line-height-body-xs: 20px;
+}
+

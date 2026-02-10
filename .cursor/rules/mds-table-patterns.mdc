@@ -1,0 +1,162 @@
+---
+title: MDS Table Layout Patterns
+scope: "**/*.{ts,tsx,css}"
+alwaysApply: true
+---
+
+# MDS Table Layout Best Practices
+
+## Critical Rule: No Flexbox or Grid in Table Cells
+
+**NEVER use `display: flex` or `display: grid` inside `<td>` or `<th>` elements.**
+
+Flexbox/Grid creates a different formatting context that causes:
+- Border misalignment across columns
+- Inconsistent row heights
+- Cell content rendering issues
+
+### ❌ BAD - Causes Border Misalignment
+```css
+.table-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+```
+
+### ✅ GOOD - Use Natural Inline Flow
+```css
+.table-actions {
+  white-space: nowrap;
+}
+
+.table-actions .ui-Button {
+  margin-right: 0.5rem;
+}
+```
+
+## Table Structure Requirements
+
+### 1. Use MDS Table Tokens
+Always reference table tokens from `src/styles/mds/table.tokens.css`:
+
+```css
+.data-table {
+  font-family: var(--mds-table-font-family);
+  font-size: var(--mds-table-font-size);
+  line-height: var(--mds-table-line-height);
+}
+
+.data-table th {
+  font-weight: var(--mds-table-header-font-weight);
+  padding: var(--mds-table-cell-padding-y) var(--mds-table-cell-padding-x);
+}
+
+.data-table td {
+  font-weight: var(--mds-table-body-font-weight);
+  padding: var(--mds-table-cell-padding-y) var(--mds-table-cell-padding-x);
+  border-bottom: var(--mds-table-border-width) var(--mds-table-border-style) var(--mds-table-border);
+}
+```
+
+### 2. Fixed Layout for Complex Tables
+For tables with action columns or varying content:
+
+```css
+.data-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* Specify explicit widths */
+.data-table th:nth-child(1) { width: 25%; }
+.data-table th:nth-child(2) { width: 20%; }
+```
+
+### 3. Default Left Alignment
+By default, all text, badges, and icons in table cells must be left-aligned:
+
+```css
+.data-table th,
+.data-table td {
+  text-align: left;
+}
+```
+
+Do NOT center-align badges, icons, or status indicators in table cells unless explicitly required by the design. Left alignment is the default for all table content.
+
+### 4. Vertical Alignment
+Always center content vertically:
+
+```css
+.data-table td {
+  vertical-align: middle;
+}
+```
+
+### 5. Action Columns
+For cells with multiple buttons:
+
+```css
+.table-actions {
+  white-space: nowrap;  /* Prevent wrapping */
+}
+
+.table-actions .ui-Button {
+  margin-right: 0.5rem;  /* Use margin, not gap */
+}
+
+.table-actions .ui-Button:last-child {
+  margin-right: 0;
+}
+```
+
+## Common Patterns
+
+### Status Badges in Tables
+```tsx
+<td>
+  <Badge variant="success">Active</Badge>
+</td>
+```
+
+### Action Buttons in Tables
+```tsx
+<td className="table-actions">
+  <Button variant="tertiary" size="sm">View</Button>
+  <Button variant="tertiary" size="sm">Edit</Button>
+  <Button variant="danger" size="sm">Delete</Button>
+</td>
+```
+
+### Responsive Tables
+```css
+.table-container {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .table-actions {
+    display: block;  /* Stack buttons on mobile */
+  }
+  
+  .table-actions .ui-Button {
+    display: block;
+    margin-bottom: 0.25rem;
+    width: 100%;
+  }
+}
+```
+
+## Why These Rules Matter
+
+1. **Consistent Borders**: Natural table cell flow ensures borders render at the same position
+2. **Predictable Heights**: Table cells calculate height consistently without flex interference
+3. **Cross-Browser Compatibility**: Standard table layout works reliably everywhere
+4. **Maintainability**: Following table semantics makes code easier to understand
+
+## When You Need Layout Control
+
+If you absolutely need flex/grid layout, extract that content into a component:
+- ✅ Use flex inside a `<div>` wrapper component
+- ✅ Then place that component in the table cell
+- ❌ Never apply flex directly to `<td>` or `<th>`

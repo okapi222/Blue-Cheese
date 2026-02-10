@@ -1,0 +1,81 @@
+/* Core Design Tokens */
+@import './styles/mds/colors.css';
+@import './styles/mds/typography.css';
+@import './styles/mds/elevation.css';
+@import './styles/mds/grid.css';
+
+/* Component Tokens */
+@import './styles/mds/accordion.tokens.css';
+@import './styles/mds/alert.tokens.css';
+@import './styles/mds/avatar.tokens.css';
+@import './styles/mds/back-to-top.tokens.css';
+@import './styles/mds/badge.tokens.css';
+@import './styles/mds/breadcrumb.tokens.css';
+@import './styles/mds/button.tokens.css';
+@import './styles/mds/card.tokens.css';
+@import './styles/mds/checkbox.tokens.css';
+@import './styles/mds/code.tokens.css';
+@import './styles/mds/date-picker.tokens.css';
+@import './styles/mds/footer.tokens.css';
+@import './styles/mds/header.tokens.css';
+@import './styles/mds/hero.tokens.css';
+@import './styles/mds/input.tokens.css';
+@import './styles/mds/link.tokens.css';
+@import './styles/mds/loading.tokens.css';
+@import './styles/mds/modal.tokens.css';
+@import './styles/mds/nested-components.tokens.css';
+@import './styles/mds/numeric-input.tokens.css';
+@import './styles/mds/page-switcher.tokens.css';
+@import './styles/mds/pagination.tokens.css';
+@import './styles/mds/popup-menu.tokens.css';
+@import './styles/mds/progress-bar.tokens.css';
+@import './styles/mds/radio.tokens.css';
+@import './styles/mds/script-mark.tokens.css';
+@import './styles/mds/select.tokens.css';
+@import './styles/mds/table.tokens.css';
+@import './styles/mds/tabs.tokens.css';
+@import './styles/mds/tag.tokens.css';
+@import './styles/mds/textarea.tokens.css';
+@import './styles/mds/toast.tokens.css';
+@import './styles/mds/toggle.tokens.css';
+@import './styles/mds/tooltip.tokens.css';
+@import './styles/mds/vertical-navigation.tokens.css';
+
+:root {
+  font-family: var(--mds-font-body);
+  line-height: var(--mds-line-height-body-sm);
+  font-weight: var(--mds-font-weight-regular);
+
+  color-scheme: light;
+  color: var(--mds-color-text-default);
+  background-color: var(--mds-color-background-default);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: var(--mds-font-weight-medium);
+  color: var(--mds-color-electric-blue-500);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--mds-color-electric-blue-400);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: var(--mds-font-display);
+  font-size: var(--mds-font-size-heading-2);
+  line-height: var(--mds-line-height-heading-2);
+  color: var(--mds-color-text-headings);
+}

@@ -1,0 +1,19 @@
+/**
+ * Card Component Styles
+ * Uses MDS card tokens from src/styles/mds/card.tokens.css
+ */
+
+.ui-Card {
+  background: var(--mds-card-background);
+  border: var(--mds-card-border);
+  border-radius: var(--mds-card-border-radius-md);
+  box-shadow: var(--mds-card-box-shadow);
+  padding: var(--mds-card-padding-md);
+  z-index: var(--mds-card-z-index);
+  transition: box-shadow 0.2s ease;
+}
+
+.ui-Card:hover {
+  box-shadow: var(--mds-card-hover-box-shadow);
+  z-index: var(--mds-card-hover-z-index);
+}

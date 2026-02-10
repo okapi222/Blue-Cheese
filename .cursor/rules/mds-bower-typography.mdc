@@ -1,0 +1,83 @@
+---
+title: MDS Bower Typography Restrictions
+scope: "**/*.{ts,tsx,css}"
+alwaysApply: true
+---
+
+# Bower Font Usage Rules
+
+Bower is the McKinsey display typeface (--mds-font-display). Its usage is strictly limited.
+
+## Allowed Usage
+
+Bower may ONLY be used when ALL conditions are met:
+
+1. Display sizes only -- Use ONLY with display tokens (display-1 through display-6)
+2. Weight 500 or 700 only -- Never 300 or 400.
+3. Minimum size 2.75rem (44px) -- This is display-6. Never use Bower below this size.
+
+### Exception: Application Name in Top Banner
+
+The application name/logo in the top navigation banner may use Bower at a minimum size of 1.5rem (24px), with weights 500 or 700. This is the ONLY exception to the 2.75rem minimum rule.
+
+Example:
+```css
+.app-logo {
+  font-family: var(--mds-font-display);
+  font-size: 1.5rem; /* Minimum for app name only */
+  font-weight: var(--mds-font-weight-bold); /* 700 */
+}
+```
+
+## Prohibited Usage
+
+Bower must NEVER be used for:
+
+- Data or quantities -- Numbers like $2.4M, 148, 94%. Use McKinsey Sans (--mds-font-body) instead.
+- Dashboard widget titles -- Section headers like Recent Projects. Use McKinsey Sans.
+- Headings smaller than 2.75rem -- heading-2 through heading-6 are too small for Bower.
+- Body text, labels, or captions -- Always use McKinsey Sans.
+- Table content -- All table text uses McKinsey Sans.
+- Navigation links or buttons -- Always use McKinsey Sans.
+
+## What to Use Instead
+
+For all non-display text, use McKinsey Sans (--mds-font-body).
+
+GOOD - Bower for large display text:
+  font-family: var(--mds-font-display)
+  font-size: var(--mds-font-size-display-3) 3.5rem 56px
+  font-weight: var(--mds-font-weight-medium) 500
+
+GOOD - McKinsey Sans for page titles:
+  font-family: var(--mds-font-body)
+  font-size: var(--mds-font-size-heading-3)
+  font-weight: var(--mds-font-weight-bold)
+
+GOOD - McKinsey Sans for data values:
+  font-family: var(--mds-font-body)
+  font-size: var(--mds-font-size-heading-2)
+  font-weight: var(--mds-font-weight-bold)
+
+BAD - Bower at heading-5 size (1.75rem below 2.75rem minimum):
+  font-family: var(--mds-font-display)
+  font-size: var(--mds-font-size-heading-5)
+
+BAD - Bower at weight 400:
+  font-family: var(--mds-font-display)
+  font-weight: var(--mds-font-weight-regular)
+
+BAD - Bower for data values:
+  font-family: var(--mds-font-display)
+  font-size: var(--mds-font-size-heading-2)
+
+## Quick Reference
+
+Display text at or above 2.75rem: --mds-font-display (Bower), weights 500 or 700
+Application name in top banner: --mds-font-display (Bower), minimum 1.5rem, weights 500 or 700 (ONLY exception)
+Page titles and headings: --mds-font-body (McKinsey Sans), weights 500 or 700
+Widget and section titles: --mds-font-body (McKinsey Sans), weights 500 or 700
+Data values and quantities: --mds-font-body (McKinsey Sans), weight 700
+Body labels captions: --mds-font-body (McKinsey Sans), weights 400 or 500
+Table content: --mds-font-body (McKinsey Sans), weights 400 or 500
+Buttons and navigation: --mds-font-body (McKinsey Sans), weight 500

@@ -1,0 +1,157 @@
+/**
+ * MDS Design Tokens - Colors
+ * Extracted from Figma: MDS Foundations / Color
+ * https://www.figma.com/design/UTyJwVVwPjs9rQwTgxRqFU/MDS-Foundations?node-id=0-1
+ */
+
+:root {
+  /* ============================================
+     CORE BRAND COLORS
+     ============================================ */
+  --mds-color-deep-blue-900: #051c2c;
+  --mds-color-electric-blue-500: #2251ff;
+  --mds-color-cyan-500: #00a9f4;
+
+  /* ============================================
+     NEUTRAL SCALE
+     ============================================ */
+  --mds-color-white: #ffffff;
+  --mds-color-neutral-5: #f2f2f2;
+  --mds-color-neutral-10: #e6e6e6;
+  --mds-color-neutral-20: #cccccc;
+  --mds-color-neutral-30: #b3b3b3;
+  --mds-color-neutral-54: #757575;
+  --mds-color-neutral-60: #666666;
+  --mds-color-neutral-70: #4d4d4d;
+  --mds-color-neutral-80: #333333;
+  --mds-color-black: #000000;
+
+  /* ============================================
+     SEMANTIC TEXT COLORS
+     ============================================ */
+  --mds-color-text-inverse: #ffffff;
+  --mds-color-text-headings: #000000;
+  --mds-color-text-default: #333333;
+  --mds-color-text-subtle: #757575;
+  --mds-color-text-placeholder: #b3b3b3;
+
+  /* ============================================
+     SEMANTIC BORDER COLORS
+     ============================================ */
+  --mds-color-border-default: #e6e6e6;
+  --mds-color-border-subtle: #b3b3b3;
+  --mds-color-border-strong: #333333;
+
+  /* ============================================
+     SEMANTIC BACKGROUND COLORS
+     ============================================ */
+  --mds-color-background-default: #ffffff;
+  --mds-color-background-subtle: #f2f2f2;
+  --mds-color-background-inverse: #051c2c;
+
+  /* ============================================
+     DATA VISUALIZATION - DEEP BLUE SCALE
+     ============================================ */
+  --mds-color-deep-blue-200: #c0d5e3;
+  --mds-color-deep-blue-300: #92b4ca;
+  --mds-color-deep-blue-400: #6593b1;
+  --mds-color-deep-blue-500: #377297;
+  --mds-color-deep-blue-600: #215c83;
+  --mds-color-deep-blue-700: #0f476f;
+  --mds-color-deep-blue-800: #03314e;
+  /* --mds-color-deep-blue-900: defined in Core Brand */
+
+  /* ============================================
+     DATA VISUALIZATION - ELECTRIC BLUE SCALE
+     ============================================ */
+  --mds-color-electric-blue-300: #a2b8ff;
+  --mds-color-electric-blue-400: #6285ff;
+  /* --mds-color-electric-blue-500: defined in Core Brand */
+  --mds-color-electric-blue-600: #1b41cc;
+  --mds-color-electric-blue-700: #143199;
+  --mds-color-electric-blue-800: #0d2166;
+  --mds-color-electric-blue-900: #061033;
+
+  /* ============================================
+     DATA VISUALIZATION - CYAN SCALE
+     ============================================ */
+  --mds-color-cyan-300: #80d4f9;
+  --mds-color-cyan-400: #40bff7;
+  /* --mds-color-cyan-500: defined in Core Brand */
+  --mds-color-cyan-600: #0087c3;
+  --mds-color-cyan-700: #006592;
+  --mds-color-cyan-800: #004462;
+  --mds-color-cyan-900: #002231;
+
+  /* ============================================
+     DATA VISUALIZATION - MARINE GREEN SCALE
+     ============================================ */
+  --mds-color-marine-green-200: #b8e8e1;
+  --mds-color-marine-green-300: #8ad9cd;
+  --mds-color-marine-green-400: #5ccab9;
+  --mds-color-marine-green-500: #2ebba5;
+  --mds-color-marine-green-600: #259684;
+  --mds-color-marine-green-700: #1c7063;
+  --mds-color-marine-green-800: #124b42;
+
+  /* ============================================
+     DATA VISUALIZATION - AMBER YELLOW SCALE
+     ============================================ */
+  --mds-color-amber-yellow-200: #fff0c0;
+  --mds-color-amber-yellow-300: #ffe699;
+  --mds-color-amber-yellow-400: #ffdc72;
+  --mds-color-amber-yellow-500: #ffd24c;
+  --mds-color-amber-yellow-600: #cca83d;
+  --mds-color-amber-yellow-700: #997e2e;
+  --mds-color-amber-yellow-800: #66541f;
+  --mds-color-amber-yellow-900: #332a0f;
+
+  /* ============================================
+     DATA VISUALIZATION - ORCHID PINK SCALE
+     ============================================ */
+  --mds-color-orchid-pink-300: #f5c6e8;
+  --mds-color-orchid-pink-400: #efa5da;
+  --mds-color-orchid-pink-500: #e983cb;
+  --mds-color-orchid-pink-600: #ba69a2;
+  --mds-color-orchid-pink-700: #8c4f7a;
+  --mds-color-orchid-pink-800: #5d3451;
+
+  /* ============================================
+     DATA VISUALIZATION - CRIMSON RED SCALE
+     ============================================ */
+  --mds-color-crimson-red-300: #ffadad;
+  --mds-color-crimson-red-400: #ff6666;
+  --mds-color-crimson-red-500: #e60000;
+  --mds-color-crimson-red-600: #b80000;
+  --mds-color-crimson-red-700: #8a0000;
+  --mds-color-crimson-red-800: #5c0000;
+
+ /* ============================================
+     FEEDBACK
+     ============================================ */
+
+     /* Light backgrounds */
+     --mds-color-informational-light: #E5F0FF;
+     --mds-color-feedback-success-light: #E6FEE8;
+     --mds-color-feedback-warning-light: #FFF9D6;
+     --mds-color-feedback-danger-light: #FEEBEB;
+     --mds-color-feedback-neutral-light: #F2F2F2;
+
+     /* Primary feedback colors */
+     --mds-color-informational: #2251FF;
+     --mds-color-feedback-success: #117E1A;
+     --mds-color-feedback-warning: #FFD048;
+     --mds-color-feedback-danger: #CD3030;
+     --mds-color-feedback-neutral: #333333;
+
+
+
+
+
+
+
+
+
+
+}
+

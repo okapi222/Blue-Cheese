@@ -1,0 +1,155 @@
+/**
+ * Checkbox Component Styles
+ * Uses MDS checkbox tokens from src/styles/mds/checkbox.tokens.css
+ */
+
+.ui-Checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mds-checkbox-label-gap);
+  cursor: pointer;
+}
+
+.ui-Checkbox--disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.ui-Checkbox__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ui-Checkbox__box {
+  position: relative;
+  width: var(--mds-checkbox-size-medium);
+  height: var(--mds-checkbox-size-medium);
+  border: var(--mds-checkbox-border-width) solid var(--mds-checkbox-unchecked-border);
+  border-radius: var(--mds-checkbox-border-radius);
+  background: var(--mds-checkbox-unchecked-background);
+  transition: all 150ms ease-in-out;
+  flex-shrink: 0;
+}
+
+.ui-Checkbox--sm .ui-Checkbox__box {
+  width: var(--mds-checkbox-size-small);
+  height: var(--mds-checkbox-size-small);
+}
+
+/* Checkmark */
+.ui-Checkbox__box::after {
+  content: '';
+  position: absolute;
+  display: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 4px;
+  height: 8px;
+  border: solid var(--mds-checkbox-checked-checkmark-color);
+  border-width: 0 2px 2px 0;
+}
+
+.ui-Checkbox--sm .ui-Checkbox__box::after {
+  width: 3px;
+  height: 6px;
+}
+
+/* Indeterminate line */
+.ui-Checkbox__box::before {
+  content: '';
+  position: absolute;
+  display: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 2px;
+  background: var(--mds-checkbox-indeterminate-line-color);
+}
+
+.ui-Checkbox--sm .ui-Checkbox__box::before {
+  width: 8px;
+}
+
+/* Checked state */
+.ui-Checkbox__input:checked + .ui-Checkbox__box {
+  background: var(--mds-checkbox-checked-background);
+  border-color: var(--mds-checkbox-checked-border);
+}
+
+.ui-Checkbox__input:checked + .ui-Checkbox__box::after {
+  display: block;
+}
+
+/* Indeterminate state */
+.ui-Checkbox__input:indeterminate + .ui-Checkbox__box {
+  background: var(--mds-checkbox-indeterminate-background);
+  border-color: var(--mds-checkbox-indeterminate-border);
+}
+
+.ui-Checkbox__input:indeterminate + .ui-Checkbox__box::before {
+  display: block;
+}
+
+/* Hover states */
+.ui-Checkbox:hover .ui-Checkbox__box {
+  border-color: var(--mds-checkbox-unchecked-hover-border);
+}
+
+.ui-Checkbox:hover .ui-Checkbox__input:checked + .ui-Checkbox__box {
+  background: var(--mds-checkbox-checked-hover-background);
+  border-color: var(--mds-checkbox-checked-hover-border);
+}
+
+.ui-Checkbox:hover .ui-Checkbox__input:indeterminate + .ui-Checkbox__box {
+  background: var(--mds-checkbox-indeterminate-hover-background);
+  border-color: var(--mds-checkbox-indeterminate-hover-border);
+}
+
+/* Focus states */
+.ui-Checkbox__input:focus-visible + .ui-Checkbox__box {
+  outline: var(--mds-checkbox-focus-ring-width) var(--mds-checkbox-focus-ring-style) var(--mds-checkbox-focus-ring-color);
+  outline-offset: var(--mds-checkbox-focus-ring-offset);
+}
+
+/* Disabled states */
+.ui-Checkbox--disabled .ui-Checkbox__box {
+  background: var(--mds-checkbox-unchecked-disabled-background);
+  border-color: var(--mds-checkbox-unchecked-disabled-border);
+}
+
+.ui-Checkbox--disabled .ui-Checkbox__input:checked + .ui-Checkbox__box {
+  background: var(--mds-checkbox-checked-disabled-background);
+  border-color: var(--mds-checkbox-checked-disabled-border);
+}
+
+.ui-Checkbox--disabled .ui-Checkbox__input:checked + .ui-Checkbox__box::after {
+  border-color: var(--mds-checkbox-checked-disabled-checkmark-color);
+}
+
+.ui-Checkbox--disabled .ui-Checkbox__input:indeterminate + .ui-Checkbox__box {
+  background: var(--mds-checkbox-indeterminate-disabled-background);
+  border-color: var(--mds-checkbox-indeterminate-disabled-border);
+}
+
+.ui-Checkbox--disabled .ui-Checkbox__input:indeterminate + .ui-Checkbox__box::before {
+  background: var(--mds-checkbox-indeterminate-disabled-line-color);
+}
+
+/* Label */
+.ui-Checkbox__label {
+  font-family: var(--mds-font-body);
+  font-weight: var(--mds-font-weight-regular);
+  font-size: var(--mds-font-size-body-sm);
+  line-height: var(--mds-line-height-body-sm);
+  color: var(--mds-color-text-default);
+  user-select: none;
+}
+
+.ui-Checkbox--disabled .ui-Checkbox__label {
+  color: var(--mds-color-text-disabled);
+}

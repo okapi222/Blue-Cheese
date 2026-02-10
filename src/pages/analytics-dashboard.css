@@ -1,0 +1,597 @@
+/**
+ * Analytics Dashboard Styles
+ * Uses MDS design tokens for consistent styling
+ */
+
+.analytics-dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mds-color-background-default);
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.analytics-header {
+  background-color: var(--mds-color-white);
+  border-bottom: 1px solid var(--mds-color-border-default);
+  padding: 0 24px;
+}
+
+.analytics-header-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+
+.analytics-logo {
+  font-family: var(--mds-font-display);
+  font-size: 1.5em; /* Banner application name */
+  font-weight: var(--mds-font-weight-bold);
+  color: var(--mds-color-text-headings);
+  margin: 0;
+}
+
+.analytics-nav {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+  margin-right: 24px;
+}
+
+.nav-link {
+  font-family: var(--mds-font-body);
+  font-size: var(--mds-font-size-body-sm);
+  font-weight: var(--mds-font-weight-medium);
+  color: var(--mds-color-text-default);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--mds-color-background-subtle);
+  color: var(--mds-color-text-headings);
+}
+
+.nav-link--active {
+  background-color: var(--mds-color-background-subtle);
+  color: var(--mds-color-electric-blue-500);
+  font-weight: var(--mds-font-weight-bold);
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+
+.analytics-main {
+  flex: 1;
+  padding: 32px 24px;
+}
+
+.analytics-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ============================================
+   TITLE SECTION
+   ============================================ */
+
+.analytics-title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  text-align: left; /* Left-positioned = left-aligned */
+}
+
+.analytics-title {
+  font-family: var(--mds-font-body);
+  font-size: 2em; /* Dashboard title */
+  font-weight: var(--mds-font-weight-bold);
+  color: var(--mds-color-text-headings);
+  margin: 0 0 8px 0;
+  text-align: left; /* Matches section alignment */
+}
+
+.analytics-subtitle {
+  font-family: var(--mds-font-body);
+  font-size: 1.2em; /* Dashboard subtitle */
+  color: var(--mds-color-text-subtle);
+  margin: 0;
+  text-align: left; /* Matches title alignment */
+}
+
+.analytics-title-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.analytics-title-actions .ui-Select {
+  min-width: 160px;
+}
+
+/* ============================================
+   METRICS GRID
+   ============================================ */
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.metric-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metric-label {
+  font-family: var(--mds-font-body);
+  font-size: var(--mds-font-size-body-sm);
+  font-weight: var(--mds-font-weight-medium);
+  color: var(--mds-color-text-subtle);
+}
+
+.metric-value {
+  font-family: var(--mds-font-body);
+  font-size: var(--mds-font-size-heading-2);
+  font-weight: var(--mds-font-weight-bold);
+  color: var(--mds-color-text-headings);
+  line-height: 1.2;
+}
+
+/* Mini Charts */
+.metric-chart {
+  margin-top: auto;
+}
+
+.mini-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 48px;
+}
+
+.mini-chart .chart-bar {
+  flex: 1;
+  background-color: var(--mds-color-electric-blue-500); /* Solid color - no gradients */
+  border-radius: 2px 2px 0 0;
+  min-height: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.mini-chart .chart-bar:hover {
+  opacity: 0.8;
+}
+
+/* Progress Bar */
+.metric-progress {
+  margin-top: auto;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: var(--mds-color-background-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--mds-color-electric-blue-500); /* Solid color - no gradients */
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* ============================================
+   CHART SECTION
+   ============================================ */
+
+.chart-section {
+  margin-top: 8px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 24px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mds-font-body);
+  font-size: var(--mds-font-size-body-sm);
+  color: var(--mds-color-text-default);
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.legend-dot--primary {
+  background-color: var(--mds-color-electric-blue-500);
+}
+
+.legend-dot--secondary {
+  background-color: var(--mds-color-neutral-gray-300);
+}
+
+.revenue-chart {
+  margin-top: 16px;
+}
+
+.chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  height: 240px;
+  padding: 0 12px;
+  border-bottom: 2px solid var(--mds-color-border-default);
+}
+
+.chart-bar-group {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.chart-bar-actual,
+.chart-bar-target {
+  flex: 1;
+  border-radius: 4px 4px 0 0;
+  min-height: 20px;
+  transition: opacity 0.2s ease;
+}
+
+.chart-bar-actual {
+  background-color: var(--mds-color-electric-blue-500); /* Solid color - no gradients */
+}
+
+.chart-bar-target {
+  background-color: var(--mds-color-neutral-gray-300);
+}
+
+.chart-bar-actual:hover,
+.chart-bar-target:hover {
+  opacity: 0.8;
+}
+
+.chart-labels {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 12px 0;
+  font-family: var(--mds-font-body);
+  font-size: var(--mds-font-size-body-xs);
+  color: var(--mds-color-text-subtle);
+}
+
+/* ============================================
+   TABLE SECTION
+   ============================================ */
+
+.table-section {
+  margin-top: 8px;
+}
+
+.section-title {
+  font-family: var(--mds-font-body);
+  font-size: 1.4em; /* Full-width widget title */
+  font-weight: var(--mds-font-weight-bold);
+  color: var(--mds-color-text-headings);
+  margin: 0 0 4px 0;
+}
+
+.section-description {
+  font-family: var(--mds-font-body);
+  font-size: var(--mds-font-size-body-sm);
+  color: var(--mds-color-text-subtle);
+  margin: 0;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  gap: 24px;
+}
+
+.table-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.table-search {
+  min-width: 240px;
+}
+
+.table-filter {
+  min-width: 160px;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--mds-table-font-family);
+  font-size: var(--mds-table-font-size);
+  line-height: var(--mds-table-line-height);
+  background-color: var(--mds-table-background);
+}
+
+.data-table thead {
+  background-color: var(--mds-color-background-subtle);
+}
+
+.data-table th {
+  font-weight: var(--mds-table-header-font-weight);
+  color: var(--mds-color-text-headings);
+  padding: var(--mds-table-cell-padding-y) var(--mds-table-cell-padding-x);
+  text-align: left;
+  border-bottom: 2px solid var(--mds-color-border-default);
+  white-space: nowrap;
+}
+
+.data-table td {
+  font-weight: var(--mds-table-body-font-weight);
+  color: var(--mds-table-text);
+  padding: var(--mds-table-cell-padding-y) var(--mds-table-cell-padding-x);
+  border-bottom: var(--mds-table-border-width) var(--mds-table-border-style) var(--mds-table-border);
+  vertical-align: middle;
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--mds-color-background-subtle);
+}
+
+.table-cell-primary {
+  font-weight: var(--mds-font-weight-medium);
+  color: var(--mds-color-text-headings);
+}
+
+.table-actions {
+  white-space: nowrap;
+}
+
+.table-actions .ui-Button {
+  margin-right: 8px;
+}
+
+.table-actions .ui-Button:last-child {
+  margin-right: 0;
+}
+
+.sort-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sort-button:hover {
+  color: var(--mds-color-electric-blue-500);
+}
+
+.sort-indicator {
+  color: var(--mds-color-electric-blue-500);
+}
+
+/* Completion Cell */
+.completion-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 100px;
+}
+
+.completion-text {
+  font-family: var(--mds-font-body);
+  font-size: var(--mds-font-size-body-xs);
+  font-weight: var(--mds-font-weight-medium);
+}
+
+.completion-bar {
+  height: 4px;
+  background-color: var(--mds-color-background-subtle);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.completion-fill {
+  height: 100%;
+  background-color: var(--mds-color-feedback-success);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* ============================================
+   PAGINATION
+   ============================================ */
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--mds-color-border-default);
+}
+
+.pagination-info {
+  font-family: var(--mds-font-body);
+  font-size: var(--mds-font-size-body-sm);
+  color: var(--mds-color-text-subtle);
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pagination-button {
+  background: none;
+  border: 1px solid var(--mds-color-border-default);
+  color: var(--mds-color-text-default);
+  font-family: var(--mds-font-body);
+  font-size: var(--mds-font-size-body-sm);
+  font-weight: var(--mds-font-weight-medium);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 36px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.pagination-button:hover {
+  background-color: var(--mds-color-background-subtle);
+  border-color: var(--mds-color-border-hover);
+}
+
+.pagination-button--active {
+  background-color: var(--mds-color-electric-blue-500);
+  border-color: var(--mds-color-electric-blue-500);
+  color: var(--mds-color-white);
+}
+
+.pagination-button--active:hover {
+  background-color: var(--mds-color-electric-blue-600);
+  border-color: var(--mds-color-electric-blue-600);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .analytics-title-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .table-controls {
+    width: 100%;
+  }
+  
+  .table-search,
+  .table-filter {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .analytics-header-content {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .analytics-nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    border-top: 1px solid var(--mds-color-border-default);
+    padding-top: 12px;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .analytics-title-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .analytics-title-actions .ui-Select,
+  .analytics-title-actions .ui-Button {
+    width: 100%;
+  }
+  
+  .pagination {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .pagination-controls {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .analytics-main {
+    padding: 16px 12px;
+  }
+  
+  .analytics-content {
+    gap: 16px;
+  }
+  
+  .chart-bars {
+    gap: 12px;
+  }
+  
+  .chart-bar-group {
+    gap: 4px;
+  }
+  
+  .table-actions .ui-Button {
+    display: block;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+}
