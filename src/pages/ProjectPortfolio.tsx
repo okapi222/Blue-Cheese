@@ -1,14 +1,13 @@
 import { useState, useMemo } from 'react'
 import {
   DndContext,
-  DragEndEvent,
   DragOverlay,
-  DragStartEvent,
   PointerSensor,
   useSensor,
   useSensors,
   closestCorners
 } from '@dnd-kit/core'
+import type { DragEndEvent, DragStartEvent } from '@dnd-kit/core'
 import {
   SortableContext,
   arrayMove,
@@ -279,7 +278,7 @@ function SortableProjectCard({
         <div className="project-card__title-section" onClick={() => onCardClick(project)}>
           <h4 className="project-card__title">{project.name}</h4>
           {project.updates > 0 && (
-            <Badge variant="error" style="subtle" size="sm">
+            <Badge variant="error" badgeStyle="outlined" size="sm">
               {project.updates}
             </Badge>
           )}
@@ -301,7 +300,7 @@ function SortableProjectCard({
           </div>
           <div className="project-card__meta-row">
             <span className="project-card__label">Priority:</span>
-            <Badge variant={getPriorityBadgeVariant(project.priority)} style="subtle" size="sm">
+            <Badge variant={getPriorityBadgeVariant(project.priority)} badgeStyle="outlined" size="sm">
               {project.priority}
             </Badge>
           </div>
@@ -531,13 +530,13 @@ export function ProjectPortfolio() {
             </div>
             <div className="project-detail__info-item">
               <span className="project-detail__label">Status:</span>
-              <Badge variant={getStatusBadgeVariant(selectedProject.status)} style="subtle">
+              <Badge variant={getStatusBadgeVariant(selectedProject.status)} badgeStyle="outlined">
                 {selectedProject.status}
               </Badge>
             </div>
             <div className="project-detail__info-item">
               <span className="project-detail__label">Priority:</span>
-              <Badge variant={getPriorityBadgeVariant(selectedProject.priority)} style="subtle">
+              <Badge variant={getPriorityBadgeVariant(selectedProject.priority)} badgeStyle="outlined">
                 {selectedProject.priority}
               </Badge>
             </div>
@@ -599,7 +598,7 @@ export function ProjectPortfolio() {
                 <td>{member.role}</td>
                 <td>{member.allocation}%</td>
                 <td>
-                  <Badge variant={getResourceStatusBadgeVariant(member.status)} style="subtle" size="sm">
+                  <Badge variant={getResourceStatusBadgeVariant(member.status)} badgeStyle="outlined" size="sm">
                     {member.status}
                   </Badge>
                 </td>
@@ -677,7 +676,7 @@ export function ProjectPortfolio() {
 
         {totalUpdates > 0 && (
           <div className="project-portfolio__notifications">
-            <Badge variant="error" style="bold">
+            <Badge variant="error" badgeStyle="filled">
               {totalUpdates} Updates
             </Badge>
           </div>
@@ -785,7 +784,7 @@ export function ProjectPortfolio() {
                 <div key={status} className="kanban-column">
                   <div className="kanban-column__header">
                     <h3 className="kanban-column__title">{status}</h3>
-                    <Badge variant="neutral" style="subtle" size="sm">
+                    <Badge variant="neutral" badgeStyle="outlined" size="sm">
                       {columnProjects.length}
                     </Badge>
                   </div>
@@ -861,7 +860,7 @@ export function ProjectPortfolio() {
                       <div className="project-table__name-cell">
                         {project.name}
                         {project.updates > 0 && (
-                          <Badge variant="error" style="subtle" size="sm">
+                          <Badge variant="error" badgeStyle="outlined" size="sm">
                             {project.updates}
                           </Badge>
                         )}
@@ -874,12 +873,12 @@ export function ProjectPortfolio() {
                     </td>
                     <td>{project.client}</td>
                     <td>
-                      <Badge variant={getStatusBadgeVariant(project.status)} style="subtle" size="sm">
+                      <Badge variant={getStatusBadgeVariant(project.status)} badgeStyle="outlined" size="sm">
                         {project.status}
                       </Badge>
                     </td>
                     <td>
-                      <Badge variant={getPriorityBadgeVariant(project.priority)} style="subtle" size="sm">
+                      <Badge variant={getPriorityBadgeVariant(project.priority)} badgeStyle="outlined" size="sm">
                         {project.priority}
                       </Badge>
                     </td>
