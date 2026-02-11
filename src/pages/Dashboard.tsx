@@ -72,7 +72,7 @@ export function Dashboard() {
                   <tr>
                     <td className="table-cell-primary">Digital Transformation</td>
                     <td>Acme Corp</td>
-                    <td><Badge variant="success">Active</Badge></td>
+                    <td><Badge variant="success" badgeStyle="outlined">Active</Badge></td>
                     <td>$450K</td>
                     <td className="table-actions">
                       <Button variant="tertiary" size="sm">View</Button>
@@ -82,7 +82,7 @@ export function Dashboard() {
                   <tr>
                     <td className="table-cell-primary">Market Analysis</td>
                     <td>TechStart Inc</td>
-                    <td><Badge variant="warning">Pending</Badge></td>
+                    <td><Badge variant="warning" badgeStyle="outlined">Pending</Badge></td>
                     <td>$280K</td>
                     <td className="table-actions">
                       <Button variant="tertiary" size="sm">View</Button>
@@ -92,7 +92,7 @@ export function Dashboard() {
                   <tr>
                     <td className="table-cell-primary">Operations Review</td>
                     <td>Global Ventures</td>
-                    <td><Badge variant="info">Completed</Badge></td>
+                    <td><Badge variant="info" badgeStyle="outlined">Completed</Badge></td>
                     <td>$620K</td>
                     <td className="table-actions">
                       <Button variant="tertiary" size="sm">View</Button>
@@ -102,7 +102,7 @@ export function Dashboard() {
                   <tr>
                     <td className="table-cell-primary">Risk Assessment</td>
                     <td>Finance Plus</td>
-                    <td><Badge variant="error">Cancelled</Badge></td>
+                    <td><Badge variant="error" badgeStyle="outlined">Cancelled</Badge></td>
                     <td>$190K</td>
                     <td className="table-actions">
                       <Button variant="tertiary" size="sm">View</Button>

@@ -16,4 +16,5 @@ export { Breadcrumb } from './Breadcrumb'
 export type { BreadcrumbProps, BreadcrumbItem } from './Breadcrumb'
 export { Tabs } from './Tabs'
 export type { TabsProps, TabItem } from './Tabs'
-
+export { TabNav } from './TabNav'
+export type { TabNavProps, TabNavItem } from './TabNav'

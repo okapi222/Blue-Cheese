@@ -1,0 +1,207 @@
+# MDS Badge Style in Table Rows with Buttons
+
+## Critical Rule
+
+**When table rows contain BOTH status badges AND action buttons, always use `badgeStyle="outlined"` for status badges.**
+
+This prevents visual clashing between filled badges and buttons, ensuring buttons remain the primary actionable elements in the row.
+
+## Why This Rule Matters
+
+- **Visual Hierarchy**: Outlined badges have lighter visual weight, allowing buttons to stand out as primary interactive elements
+- **Reduced Clashing**: Filled badges with solid backgrounds compete visually with buttons
+- **Professional Appearance**: Outlined badges create cleaner, more refined table layouts
+- **User Focus**: Action buttons are the primary interactive elements; badges should not draw equal attention
+
+## When to Apply This Rule
+
+Apply `badgeStyle="outlined"` to badges when ALL of the following are true:
+
+1. Badge is in a table row (`<tr>`)
+2. Same row contains action buttons (View, Edit, Delete, etc.)
+3. Badge represents status or similar categorical information
+
+## When NOT to Use Outlined Badges
+
+Use filled badges (`badgeStyle="filled"` or default) when:
+
+- Badges are NOT in table rows with buttons
+- Badges are in standalone contexts (cards, headers, standalone indicators)
+- Badges need high visual emphasis (error alerts, critical warnings outside tables)
+- Table rows have NO action buttons
+
+## Examples
+
+### ✅ GOOD - Outlined Badges in Rows with Buttons
+
+```tsx
+{/* Table row with status badge and action buttons */}
+<tr>
+  <td>Project Alpha</td>
+  <td>
+    <Badge variant="success" badgeStyle="outlined">Active</Badge>
+  </td>
+  <td className="table-actions">
+    <Button variant="tertiary" size="sm">View</Button>
+    <Button variant="tertiary" size="sm">Edit</Button>
+    <Button variant="danger" size="sm">Delete</Button>
+  </td>
+</tr>
+```
+
+```tsx
+{/* Status badge function for tables with action columns */}
+function getStatusBadge(status: ProjectStatus) {
+  switch (status) {
+    case 'active':
+      return <Badge variant="success" badgeStyle="outlined">Active</Badge>
+    case 'pending':
+      return <Badge variant="warning" badgeStyle="outlined">Pending</Badge>
+    case 'completed':
+      return <Badge variant="info" badgeStyle="outlined">Completed</Badge>
+    case 'at-risk':
+      return <Badge variant="error" badgeStyle="outlined">At Risk</Badge>
+  }
+}
+```
+
+### ✅ GOOD - Filled Badges in Standalone Contexts
+
+```tsx
+{/* Stat card - no buttons competing for attention */}
+<div className="stat-card">
+  <h3>Current Status</h3>
+  <Badge variant="success">Active</Badge>
+</div>
+```
+
+```tsx
+{/* Alert banner - needs high visibility */}
+<div className="alert-banner">
+  <Badge variant="error">Critical Issue</Badge>
+  <p>System maintenance required</p>
+</div>
+```
+
+### ❌ BAD - Filled Badges in Rows with Buttons
+
+```tsx
+{/* Visual clashing - filled badge competes with buttons */}
+<tr>
+  <td>Project Alpha</td>
+  <td>
+    <Badge variant="success">Active</Badge> {/* Missing badgeStyle="outlined" */}
+  </td>
+  <td className="table-actions">
+    <Button variant="tertiary" size="sm">View</Button>
+    <Button variant="tertiary" size="sm">Edit</Button>
+  </td>
+</tr>
+```
+
+### ❌ BAD - Outlined Badges in Standalone High-Emphasis Contexts
+
+```tsx
+{/* Error notification needs strong visual weight */}
+<div className="error-notification">
+  <Badge variant="error" badgeStyle="outlined">Failed</Badge> {/* Too subtle */}
+  <p>Transaction could not be processed</p>
+</div>
+```
+
+## Common Table Patterns
+
+### User/Team Management Tables
+
+```tsx
+<tbody>
+  {users.map(user => (
+    <tr key={user.id}>
+      <td>{user.name}</td>
+      <td>{user.email}</td>
+      <td>
+        <Badge variant={getStatusBadgeVariant(user.status)} badgeStyle="outlined">
+          {user.status}
+        </Badge>
+      </td>
+      <td className="table-actions">
+        <Button variant="tertiary" size="sm">Edit</Button>
+        <Button variant="danger" size="sm">Delete</Button>
+      </td>
+    </tr>
+  ))}
+</tbody>
+```
+
+### Project Portfolio Tables
+
+```tsx
+<tbody>
+  {projects.map(project => (
+    <tr key={project.id}>
+      <td>{project.name}</td>
+      <td>{project.client}</td>
+      <td>
+        <Badge variant={getStatusBadgeVariant(project.status)} badgeStyle="outlined">
+          {project.status}
+        </Badge>
+      </td>
+      <td>{project.revenue}</td>
+      <td className="table-actions">
+        <Button variant="tertiary" size="sm">View</Button>
+        <Button variant="tertiary" size="sm">Edit</Button>
+      </td>
+    </tr>
+  ))}
+</tbody>
+```
+
+### Analytics Dashboard Tables
+
+```tsx
+<tbody>
+  {data.map(item => (
+    <tr key={item.id}>
+      <td>{item.metric}</td>
+      <td>
+        <Badge variant={getMetricBadgeVariant(item.status)} badgeStyle="outlined">
+          {item.status}
+        </Badge>
+      </td>
+      <td>{item.value}</td>
+      <td className="table-actions">
+        <Button variant="tertiary" size="sm">Details</Button>
+        <Button variant="tertiary" size="sm">Export</Button>
+      </td>
+    </tr>
+  ))}
+</tbody>
+```
+
+## Quick Decision Matrix
+
+| Context | Has Buttons in Row? | Badge Style |
+|---------|-------------------|-------------|
+| Table row | ✅ Yes | `badgeStyle="outlined"` |
+| Table row | ❌ No | `badgeStyle="filled"` or default |
+| Stat card | N/A | `badgeStyle="filled"` or default |
+| Alert banner | N/A | `badgeStyle="filled"` or default |
+| Header section | N/A | `badgeStyle="filled"` or default |
+| Modal content | Depends | Use filled unless buttons compete visually |
+
+## Implementation Checklist
+
+When creating or reviewing table components with status indicators:
+
+- [ ] Does the table row contain action buttons?
+- [ ] Does the table row contain status badges?
+- [ ] If both: Are badges using `badgeStyle="outlined"`?
+- [ ] Are helper functions (like `getStatusBadge`) configured to return outlined badges?
+- [ ] Do standalone badge contexts (cards, headers) still use filled badges appropriately?
+
+## See Also
+
+- Badge component: `/src/ui/Badge.tsx`
+- Table patterns: `/.cursor/rules/mds-table-patterns.mdc`
+- Button spacing: `/.cursor/rules/mds-button-spacing.mdc`
+- General MDS usage: `/AGENTS.md`

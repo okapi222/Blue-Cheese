@@ -1,0 +1,142 @@
+---
+description: Button spacing and margin requirements
+alwaysApply: true
+---
+
+# MDS Button Spacing Requirements
+
+## Critical Rule
+
+**Buttons must NEVER be flush against adjacent content.** Always ensure proper breathing room around buttons using margins or gaps.
+
+## Minimum Spacing Requirements
+
+### Buttons in Section Headers
+When buttons appear in headers above tables or content sections:
+
+```css
+.section-header {
+  margin-bottom: 1.5rem; /* Minimum 24px space below header */
+}
+```
+
+### Horizontal Button Groups
+Buttons placed side-by-side need gap spacing:
+
+```css
+/* ✅ GOOD - Use gap in flex containers */
+.button-group {
+  display: flex;
+  gap: 0.75rem; /* 12px minimum between buttons */
+}
+
+/* ✅ GOOD - Use margin-right for inline buttons */
+.table-actions .ui-Button {
+  margin-right: 0.5rem; /* 8px minimum */
+}
+```
+
+### Vertical Spacing Around Standalone Buttons
+Buttons need breathing room from content above and below:
+
+```css
+/* ✅ GOOD - Margin around standalone buttons */
+.action-button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+```
+
+## Common Patterns
+
+### ✅ GOOD - Section Header with Button
+
+```tsx
+<div className="section-header">
+  <h2 className="section-title">Recent Projects</h2>
+  <Button variant="primary">New Project</Button>
+</div>
+```
+
+```css
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem; /* Space before table/content */
+}
+```
+
+### ✅ GOOD - Action Buttons in Flex Container
+
+```tsx
+<div className="page-actions">
+  <Button variant="tertiary">Cancel</Button>
+  <Button variant="primary">Save</Button>
+</div>
+```
+
+```css
+.page-actions {
+  display: flex;
+  gap: 1rem; /* Space between buttons */
+  margin-top: 2rem; /* Space above action group */
+}
+```
+
+### ✅ GOOD - Buttons in Table Cells
+
+```css
+.table-actions {
+  white-space: nowrap;
+}
+
+.table-actions .ui-Button {
+  margin-right: 0.5rem;
+}
+
+.table-actions .ui-Button:last-child {
+  margin-right: 0;
+}
+```
+
+### ❌ BAD - Buttons Flush Against Content
+
+```tsx
+{/* No margin between button and table */}
+<Button variant="primary">New Project</Button>
+<table className="data-table">
+  ...
+</table>
+```
+
+```css
+/* No spacing defined - BAD */
+.button-container {
+  display: flex;
+}
+```
+
+### ❌ BAD - Insufficient Gap in Button Groups
+
+```css
+.button-group {
+  display: flex;
+  gap: 0.25rem; /* Too small - BAD */
+}
+```
+
+## Spacing Scale Reference
+
+Use these minimum values:
+- **Tight spacing** (table actions): `0.5rem` (8px)
+- **Standard spacing** (button groups): `0.75rem - 1rem` (12-16px)
+- **Section spacing** (headers, content separation): `1.5rem - 2rem` (24-32px)
+
+## When Buttons Are in Headers
+
+Headers that precede content (tables, cards, forms) need adequate bottom margin:
+- **Minimum**: `1.5rem` (24px)
+- **Recommended**: `1.5rem - 2rem` (24-32px)
+
+This ensures the button and header don't visually merge with the content below.

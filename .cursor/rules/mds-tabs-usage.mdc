@@ -1,0 +1,261 @@
+---
+description: MDS Tabs component token usage requirements
+alwaysApply: true
+---
+
+# MDS Tabs Component Token Usage
+
+## Critical Rule
+
+**Always use MDS tabs-specific tokens** (`--mds-tabs-*`) when styling tab components. Never use generic tokens when specific tab tokens exist.
+
+## Available MDS Tabs Tokens
+
+Reference: `/src/styles/mds/tabs.tokens.css`
+
+### Typography Tokens
+```css
+--mds-tabs-font-family
+--mds-tabs-font-size
+--mds-tabs-font-weight-default
+--mds-tabs-font-weight-active
+--mds-tabs-line-height
+--mds-tabs-letter-spacing
+```
+
+### Color Tokens
+```css
+--mds-tabs-text-default
+--mds-tabs-text-active
+--mds-tabs-text-hover
+--mds-tabs-text-disabled
+--mds-tabs-background-default
+--mds-tabs-background-active
+--mds-tabs-background-hover
+--mds-tabs-indicator-color
+```
+
+### Spacing Tokens
+```css
+--mds-tabs-padding-x
+--mds-tabs-padding-y
+--mds-tabs-gap
+--mds-tabs-min-height
+```
+
+### Indicator Tokens
+```css
+--mds-tabs-indicator-height
+--mds-tabs-indicator-width
+--mds-tabs-indicator-border-radius
+--mds-tabs-indicator-offset
+```
+
+### Transition Tokens
+```css
+--mds-tabs-transition-duration
+--mds-tabs-transition-timing
+```
+
+### Variant Tokens
+```css
+--mds-tabs-boxed-border-radius
+--mds-tabs-boxed-padding-x
+--mds-tabs-boxed-padding-y
+--mds-tabs-boxed-gap
+```
+
+## Applies To
+
+- `src/ui/Tabs.tsx` and `tabs.css`
+- `src/ui/TabNav.tsx` and `tab-nav.css`
+- Any custom tab implementations
+
+## Examples
+
+### ✅ GOOD - Using MDS Tabs Tokens
+
+```css
+.ui-Tabs__tab {
+  padding: var(--mds-tabs-padding-y) var(--mds-tabs-padding-x);
+  font-family: var(--mds-tabs-font-family);
+  font-size: var(--mds-tabs-font-size);
+  font-weight: var(--mds-tabs-font-weight-default);
+  color: var(--mds-tabs-text-default);
+  min-height: var(--mds-tabs-min-height);
+  transition: color var(--mds-tabs-transition-duration) var(--mds-tabs-transition-timing);
+}
+
+.ui-Tabs__tab:hover {
+  color: var(--mds-tabs-text-hover);
+  background: var(--mds-tabs-background-hover);
+}
+
+.ui-Tabs__tab--active {
+  color: var(--mds-tabs-text-active);
+  font-weight: var(--mds-tabs-font-weight-active);
+}
+
+.ui-Tabs__tab--active::after {
+  height: var(--mds-tabs-indicator-height);
+  background-color: var(--mds-tabs-indicator-color);
+}
+```
+
+### ❌ BAD - Using Generic Tokens
+
+```css
+.ui-Tabs__tab {
+  padding: var(--mds-spacing-md) var(--mds-spacing-lg); /* Wrong - use tabs tokens */
+  font-family: var(--mds-font-body); /* Wrong - use tabs tokens */
+  font-size: var(--mds-font-size-body); /* Wrong - use tabs tokens */
+  color: var(--mds-color-text-default); /* Wrong - use tabs tokens */
+}
+
+.ui-Tabs__tab:hover {
+  color: var(--mds-color-electric-blue-500); /* Wrong - use tabs tokens */
+}
+
+.ui-Tabs__tab--active::after {
+  background-color: var(--mds-color-electric-blue-500); /* Wrong - use tabs tokens */
+}
+```
+
+### ❌ BAD - Mixing Generic and Specific Tokens
+
+```css
+.ui-Tabs__tab {
+  font-size: var(--mds-tabs-font-size); /* Good */
+  color: var(--mds-color-text-default); /* Wrong - use --mds-tabs-text-default */
+  padding: 12px 16px; /* Wrong - use --mds-tabs-padding-y/x */
+}
+```
+
+## Token Selection Priority
+
+When styling tabs, follow this priority:
+
+1. **First**: Check if a `--mds-tabs-*` token exists for the property
+2. **Second**: Only use generic tokens if NO specific tab token exists
+3. **Never**: Hard-code values when tokens are available
+
+## Component-Specific Patterns
+
+### Tab Button Default State
+```css
+.tab-button {
+  background: var(--mds-tabs-background-default);
+  color: var(--mds-tabs-text-default);
+  font-weight: var(--mds-tabs-font-weight-default);
+}
+```
+
+### Tab Button Active State
+```css
+.tab-button--active {
+  color: var(--mds-tabs-text-active);
+  font-weight: var(--mds-tabs-font-weight-active);
+  background: var(--mds-tabs-background-active);
+}
+```
+
+### Tab Button Hover State
+```css
+.tab-button:hover {
+  color: var(--mds-tabs-text-hover);
+  background: var(--mds-tabs-background-hover);
+}
+```
+
+### Tab Indicator (Underline)
+```css
+.tab-indicator {
+  height: var(--mds-tabs-indicator-height);
+  background: var(--mds-tabs-indicator-color);
+  border-radius: var(--mds-tabs-indicator-border-radius);
+}
+```
+
+### Tab Container
+```css
+.tabs-container {
+  gap: var(--mds-tabs-gap);
+  min-height: var(--mds-tabs-min-height);
+}
+```
+
+## Dark Theme Support
+
+The tabs tokens automatically support dark theme via CSS variables:
+
+```css
+[data-theme="dark"] .ui-Tabs,
+.mds-tabs--on-dark {
+  /* Dark theme tokens are automatically applied */
+  /* No need to manually override if using --mds-tabs-* tokens */
+}
+```
+
+## Why This Matters
+
+1. **Design Consistency**: Tabs look the same across the entire application
+2. **Theme Support**: Dark theme variants work automatically
+3. **Maintainability**: Changes to tab styles happen in one place (tokens file)
+4. **Future-Proofing**: When MDS updates, tabs update automatically
+5. **Accessibility**: MDS tokens include proper contrast ratios and sizing
+
+## Common Mistakes to Avoid
+
+❌ **Don't**: Use color tokens directly
+```css
+color: #0070F3; /* Wrong */
+color: var(--mds-color-electric-blue-500); /* Wrong */
+```
+
+✅ **Do**: Use tab-specific color tokens
+```css
+color: var(--mds-tabs-text-active); /* Correct */
+```
+
+❌ **Don't**: Use spacing tokens for tabs
+```css
+padding: var(--mds-spacing-md); /* Wrong */
+gap: 8px; /* Wrong */
+```
+
+✅ **Do**: Use tab-specific spacing tokens
+```css
+padding: var(--mds-tabs-padding-y) var(--mds-tabs-padding-x); /* Correct */
+gap: var(--mds-tabs-gap); /* Correct */
+```
+
+❌ **Don't**: Hard-code indicator dimensions
+```css
+border-bottom: 2px solid blue; /* Wrong */
+```
+
+✅ **Do**: Use tab indicator tokens
+```css
+border-bottom: var(--mds-tabs-indicator-height) solid var(--mds-tabs-indicator-color); /* Correct */
+```
+
+## Verification Checklist
+
+When creating or reviewing tab components, ensure:
+
+- [ ] All typography uses `--mds-tabs-font-*` tokens
+- [ ] All colors use `--mds-tabs-text-*` or `--mds-tabs-background-*` tokens
+- [ ] All spacing uses `--mds-tabs-padding-*` or `--mds-tabs-gap` tokens
+- [ ] Indicator uses `--mds-tabs-indicator-*` tokens
+- [ ] Transitions use `--mds-tabs-transition-*` tokens
+- [ ] No hard-coded values for properties with available tokens
+- [ ] No generic tokens where specific tab tokens exist
+- [ ] Disabled state uses `--mds-tabs-text-disabled`
+- [ ] Focus state uses `--mds-tabs-indicator-color` for outline
+
+## See Also
+
+- Core token file: `/src/styles/mds/tabs.tokens.css`
+- Tab component: `/src/ui/Tabs.tsx`
+- Tab navigation: `/src/ui/TabNav.tsx`
+- General MDS usage: `/AGENTS.md`

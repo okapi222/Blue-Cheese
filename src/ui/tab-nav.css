@@ -1,20 +1,14 @@
-/* Tabs Component - Using MDS Tabs Tokens */
-.ui-Tabs {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.ui-Tabs__header {
+/* Tab Navigation Component - Using MDS Tabs Tokens */
+.ui-TabNav {
   display: flex;
   gap: var(--mds-tabs-gap);
-  border-bottom: var(--mds-tabs-indicator-height) solid var(--mds-tabs-indicator-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.ui-Tabs__tab {
+.ui-TabNav__tab {
   background: var(--mds-tabs-background-default);
   border: none;
+  border-bottom: var(--mds-tabs-indicator-height) solid transparent;
   padding: var(--mds-tabs-padding-y) var(--mds-tabs-padding-x);
   font-family: var(--mds-tabs-font-family);
   font-size: var(--mds-tabs-font-size);
@@ -22,42 +16,29 @@
   line-height: var(--mds-tabs-line-height);
   color: var(--mds-tabs-text-default);
   cursor: pointer;
+  transition: all var(--mds-tabs-transition-duration) var(--mds-tabs-transition-timing);
   position: relative;
-  transition: color var(--mds-tabs-transition-duration) var(--mds-tabs-transition-timing);
   min-height: var(--mds-tabs-min-height);
 }
 
-.ui-Tabs__tab:hover {
+.ui-TabNav__tab:hover {
   color: var(--mds-tabs-text-hover);
-  background: var(--mds-tabs-background-hover);
+  background-color: var(--mds-tabs-background-hover);
 }
 
-.ui-Tabs__tab--active {
+.ui-TabNav__tab--active {
   color: var(--mds-tabs-text-active);
   font-weight: var(--mds-tabs-font-weight-active);
+  border-bottom-color: var(--mds-tabs-indicator-color);
   background: var(--mds-tabs-background-active);
 }
 
-.ui-Tabs__tab--active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: var(--mds-tabs-indicator-height);
-  background-color: var(--mds-tabs-indicator-color);
-}
-
-.ui-Tabs__tab:focus-visible {
+.ui-TabNav__tab:focus-visible {
   outline: 2px solid var(--mds-tabs-indicator-color);
   outline-offset: 2px;
 }
 
-.ui-Tabs__tab:disabled {
+.ui-TabNav__tab:disabled {
   color: var(--mds-tabs-text-disabled);
   cursor: not-allowed;
-}
-
-.ui-Tabs__panel {
-  flex: 1;
 }

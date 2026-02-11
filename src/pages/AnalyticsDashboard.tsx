@@ -106,13 +106,13 @@ export function AnalyticsDashboard() {
   const getStatusBadge = (status: Project['status']) => {
     switch (status) {
       case 'active':
-        return <Badge variant="success">Active</Badge>
+        return <Badge variant="success" badgeStyle="outlined">Active</Badge>
       case 'pending':
-        return <Badge variant="warning">Pending</Badge>
+        return <Badge variant="warning" badgeStyle="outlined">Pending</Badge>
       case 'completed':
-        return <Badge variant="info">Completed</Badge>
+        return <Badge variant="info" badgeStyle="outlined">Completed</Badge>
       case 'at-risk':
-        return <Badge variant="error">At Risk</Badge>
+        return <Badge variant="error" badgeStyle="outlined">At Risk</Badge>
     }
   }
 

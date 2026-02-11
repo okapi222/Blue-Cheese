@@ -433,7 +433,7 @@ export function UserManagement() {
                   </td>
                   <td>{user.team}</td>
                   <td>
-                    <Badge variant={getStatusBadgeVariant(user.status)}>
+                    <Badge variant={getStatusBadgeVariant(user.status)} badgeStyle="outlined">
                       {user.status}
                     </Badge>
                   </td>
