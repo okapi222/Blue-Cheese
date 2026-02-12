@@ -1,0 +1,27 @@
+/**
+ * MDS Design Tokens - Icons
+ * Icon sizing and color tokens for consistent icon usage
+ */
+
+:root {
+  /* ============================================
+     ICON SIZES
+     ============================================ */
+  --mds-icon-size-xs: 12px;
+  --mds-icon-size-sm: 16px;
+  --mds-icon-size-md: 24px;
+  --mds-icon-size-lg: 32px;
+  --mds-icon-size-xl: 48px;
+
+  /* ============================================
+     ICON COLORS (Semantic)
+     ============================================ */
+  --mds-icon-color-default: var(--mds-color-grey-700);
+  --mds-icon-color-primary: var(--mds-color-electric-blue-500);
+  --mds-icon-color-success: var(--mds-color-feedback-success);
+  --mds-icon-color-warning: var(--mds-color-feedback-warning);
+  --mds-icon-color-danger: var(--mds-color-feedback-danger);
+  --mds-icon-color-info: var(--mds-color-informational);
+  --mds-icon-color-disabled: var(--mds-color-grey-400);
+  --mds-icon-color-on-dark: var(--mds-color-white);
+}

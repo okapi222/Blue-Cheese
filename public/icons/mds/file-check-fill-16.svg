@@ -1,0 +1,5 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path transform="translate(-1712, -756)" d="M1716 760H1724V762H1716V760Z" fill="#333333"/>
+  <path transform="translate(-1712, -756)" d="M1724 763H1716V765H1724V763Z" fill="#333333"/>
+  <path transform="translate(-1712, -756)" fill-rule="evenodd" clip-rule="evenodd" d="M1713 756H1727C1727.6 756 1728 756.4 1728 757V771C1728 771.6 1727.6 772 1727 772H1713C1712.4 772 1712 771.6 1712 771V757C1712 756.4 1712.4 756 1713 756ZM1726 767V758H1714V767H1717C1717.6 767 1718 767.4 1718 768V769H1722V768C1722 767.4 1722.4 767 1723 767H1726Z" fill="#333333"/>
+</svg>

@@ -8,7 +8,7 @@
 .ui-Tabs__header {
   display: flex;
   gap: var(--mds-tabs-gap);
-  border-bottom: var(--mds-tabs-indicator-height) solid var(--mds-tabs-indicator-color);
+  border-bottom: var(--mds-tabs-border-bottom-width) solid var(--mds-tabs-border-color);
   margin-bottom: 1.5rem;
 }
 

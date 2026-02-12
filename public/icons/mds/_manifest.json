@@ -1,0 +1,1912 @@
+{
+  "total_icons": 192,
+  "total_files": 377,
+  "icons": {
+    "airplane": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "airplane-fill-16.svg",
+        "outline": "airplane-outline-16.svg"
+      }
+    },
+    "align-justify": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "align-justify-fill-16.svg",
+        "outline": "align-justify-outline-16.svg"
+      }
+    },
+    "align-left": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "align-left-fill-16.svg",
+        "outline": "align-left-outline-16.svg"
+      }
+    },
+    "analytics": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "analytics-fill-16.svg",
+        "outline": "analytics-outline-16.svg"
+      }
+    },
+    "arrow-down": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "arrow-down-fill-16.svg",
+        "outline": "arrow-down-outline-16.svg"
+      }
+    },
+    "arrow-left": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "arrow-left-fill-16.svg",
+        "outline": "arrow-left-outline-16.svg"
+      }
+    },
+    "arrow-right": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "arrow-right-fill-16.svg",
+        "outline": "arrow-right-outline-16.svg"
+      }
+    },
+    "arrow-up": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "arrow-up-fill-16.svg",
+        "outline": "arrow-up-outline-16.svg"
+      }
+    },
+    "arrows-vertical": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "arrows-vertical-fill-16.svg",
+        "outline": "arrows-vertical-outline-16.svg"
+      }
+    },
+    "at-sign": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "at-sign-fill-16.svg",
+        "outline": "at-sign-outline-16.svg"
+      }
+    },
+    "ban": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "ban-fill-16.svg",
+        "outline": "ban-outline-16.svg"
+      }
+    },
+    "bar-chart": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "bar-chart-fill-16.svg",
+        "outline": "bar-chart-outline-16.svg"
+      }
+    },
+    "bell": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "bell-fill-16.svg",
+        "outline": "bell-outline-16.svg"
+      }
+    },
+    "bicycle": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "bicycle-fill-16.svg",
+        "outline": "bicycle-outline-16.svg"
+      }
+    },
+    "bold": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "bold-fill-16.svg",
+        "outline": "bold-outline-16.svg"
+      }
+    },
+    "bookmark": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "bookmark-fill-16.svg",
+        "outline": "bookmark-outline-16.svg"
+      }
+    },
+    "bug": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "bug-fill-16.svg",
+        "outline": "bug-outline-16.svg"
+      }
+    },
+    "bus": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "bus-fill-16.svg",
+        "outline": "bus-outline-16.svg"
+      }
+    },
+    "calculator": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "calculator-fill-16.svg",
+        "outline": "calculator-outline-16.svg"
+      }
+    },
+    "calendar": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "calendar-fill-16.svg",
+        "outline": "calendar-outline-16.svg"
+      }
+    },
+    "calendar-add": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "calendar-add-fill-16.svg",
+        "outline": "calendar-add-outline-16.svg"
+      }
+    },
+    "calendar-check": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "calendar-check-fill-16.svg",
+        "outline": "calendar-check-outline-16.svg"
+      }
+    },
+    "camera": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "camera-fill-16.svg",
+        "outline": "camera-outline-16.svg"
+      }
+    },
+    "caret-left": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "caret-left-fill-16.svg",
+        "outline": "caret-left-outline-16.svg"
+      }
+    },
+    "caret-right": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "caret-right-fill-16.svg",
+        "outline": "caret-right-outline-16.svg"
+      }
+    },
+    "carets-left": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "carets-left-fill-16.svg",
+        "outline": "carets-left-outline-16.svg"
+      }
+    },
+    "carets-right": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "carets-right-fill-16.svg",
+        "outline": "carets-right-outline-16.svg"
+      }
+    },
+    "chat": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "chat-fill-16.svg",
+        "outline": "chat-outline-16.svg"
+      }
+    },
+    "check": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "check-fill-16.svg",
+        "outline": "check-outline-16.svg"
+      }
+    },
+    "check-circle": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "check-circle-fill-16.svg",
+        "outline": "check-circle-outline-16.svg"
+      }
+    },
+    "checklist": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "checklist-fill-16.svg",
+        "outline": "checklist-outline-16.svg"
+      }
+    },
+    "chevron-down": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "chevron-down-fill-16.svg",
+        "outline": "chevron-down-outline-16.svg"
+      }
+    },
+    "chevron-left": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "chevron-left-fill-16.svg",
+        "outline": "chevron-left-outline-16.svg"
+      }
+    },
+    "chevron-right": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "chevron-right-fill-16.svg",
+        "outline": "chevron-right-outline-16.svg"
+      }
+    },
+    "chevron-up": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "chevron-up-fill-16.svg",
+        "outline": "chevron-up-outline-16.svg"
+      }
+    },
+    "chevrons-down": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "chevrons-down-fill-16.svg",
+        "outline": "chevrons-down-outline-16.svg"
+      }
+    },
+    "circle": {
+      "styles": [
+        "outline"
+      ],
+      "files": {
+        "outline": "circle-outline-16.svg"
+      }
+    },
+    "clipboard": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "clipboard-fill-16.svg",
+        "outline": "clipboard-outline-16.svg"
+      }
+    },
+    "clock": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "clock-fill-16.svg",
+        "outline": "clock-outline-16.svg"
+      }
+    },
+    "close": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "close-fill-16.svg",
+        "outline": "close-outline-16.svg"
+      }
+    },
+    "cloud": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "cloud-fill-16.svg",
+        "outline": "cloud-outline-16.svg"
+      }
+    },
+    "cloud-download": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "cloud-download-fill-16.svg",
+        "outline": "cloud-download-outline-16.svg"
+      }
+    },
+    "cloud-upload": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "cloud-upload-fill-16.svg",
+        "outline": "cloud-upload-outline-16.svg"
+      }
+    },
+    "code": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "code-fill-16.svg",
+        "outline": "code-outline-16.svg"
+      }
+    },
+    "coins": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "coins-fill-16.svg",
+        "outline": "coins-outline-16.svg"
+      }
+    },
+    "collapse": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "collapse-fill-16.svg",
+        "outline": "collapse-outline-16.svg"
+      }
+    },
+    "compass": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "compass-fill-16.svg",
+        "outline": "compass-outline-16.svg"
+      }
+    },
+    "compose": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "compose-fill-16.svg",
+        "outline": "compose-outline-16.svg"
+      }
+    },
+    "crop": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "crop-fill-16.svg",
+        "outline": "crop-outline-16.svg"
+      }
+    },
+    "cursor": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "cursor-fill-16.svg",
+        "outline": "cursor-outline-16.svg"
+      }
+    },
+    "desktop": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "desktop-fill-16.svg",
+        "outline": "desktop-outline-16.svg"
+      }
+    },
+    "devices": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "devices-fill-16.svg",
+        "outline": "devices-outline-16.svg"
+      }
+    },
+    "document-forward": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "document-forward-fill-16.svg",
+        "outline": "document-forward-outline-16.svg"
+      }
+    },
+    "dollar": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "dollar-fill-16.svg",
+        "outline": "dollar-outline-16.svg"
+      }
+    },
+    "download": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "download-fill-16.svg",
+        "outline": "download-outline-16.svg"
+      }
+    },
+    "drag": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "drag-fill-16.svg",
+        "outline": "drag-outline-16.svg"
+      }
+    },
+    "euro": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "euro-fill-16.svg",
+        "outline": "euro-outline-16.svg"
+      }
+    },
+    "expand": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "expand-fill-16.svg",
+        "outline": "expand-outline-16.svg"
+      }
+    },
+    "expand-up": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "expand-up-fill-16.svg",
+        "outline": "expand-up-outline-16.svg"
+      }
+    },
+    "external-link": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "external-link-fill-16.svg",
+        "outline": "external-link-outline-16.svg"
+      }
+    },
+    "eye": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "eye-fill-16.svg",
+        "outline": "eye-outline-16.svg"
+      }
+    },
+    "eye-off": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "eye-off-fill-16.svg",
+        "outline": "eye-off-outline-16.svg"
+      }
+    },
+    "facebook": {
+      "styles": [
+        "fill"
+      ],
+      "files": {
+        "fill": "facebook-fill-16.svg"
+      }
+    },
+    "file": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "file-fill-16.svg",
+        "outline": "file-outline-16.svg"
+      }
+    },
+    "file-add": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "file-add-fill-16.svg",
+        "outline": "file-add-outline-16.svg"
+      }
+    },
+    "file-check": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "file-check-fill-16.svg",
+        "outline": "file-check-outline-16.svg"
+      }
+    },
+    "file-copy": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "file-copy-fill-16.svg",
+        "outline": "file-copy-outline-16.svg"
+      }
+    },
+    "file-export": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "file-export-fill-16.svg",
+        "outline": "file-export-outline-16.svg"
+      }
+    },
+    "file-list": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "file-list-fill-16.svg",
+        "outline": "file-list-outline-16.svg"
+      }
+    },
+    "file-text": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "file-text-fill-16.svg",
+        "outline": "file-text-outline-16.svg"
+      }
+    },
+    "film": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "film-fill-16.svg",
+        "outline": "film-outline-16.svg"
+      }
+    },
+    "flag": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "flag-fill-16.svg",
+        "outline": "flag-outline-16.svg"
+      }
+    },
+    "flash": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "flash-fill-16.svg",
+        "outline": "flash-outline-16.svg"
+      }
+    },
+    "folder": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "folder-fill-16.svg",
+        "outline": "folder-outline-16.svg"
+      }
+    },
+    "funnel": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "funnel-fill-16.svg",
+        "outline": "funnel-outline-16.svg"
+      }
+    },
+    "gallery": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "gallery-fill-16.svg",
+        "outline": "gallery-outline-16.svg"
+      }
+    },
+    "gauge": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "gauge-fill-16.svg",
+        "outline": "gauge-outline-16.svg"
+      }
+    },
+    "gift": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "gift-fill-16.svg",
+        "outline": "gift-outline-16.svg"
+      }
+    },
+    "globe": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "globe-fill-16.svg",
+        "outline": "globe-outline-16.svg"
+      }
+    },
+    "grid": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "grid-fill-16.svg",
+        "outline": "grid-outline-16.svg"
+      }
+    },
+    "handshake": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "handshake-fill-16.svg",
+        "outline": "handshake-outline-16.svg"
+      }
+    },
+    "headphones": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "headphones-fill-16.svg",
+        "outline": "headphones-outline-16.svg"
+      }
+    },
+    "headphones-off": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "headphones-off-fill-16.svg",
+        "outline": "headphones-off-outline-16.svg"
+      }
+    },
+    "heart": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "heart-fill-16.svg",
+        "outline": "heart-outline-16.svg"
+      }
+    },
+    "help": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "help-fill-16.svg",
+        "outline": "help-outline-16.svg"
+      }
+    },
+    "home": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "home-fill-16.svg",
+        "outline": "home-outline-16.svg"
+      }
+    },
+    "hourglass": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "hourglass-fill-16.svg",
+        "outline": "hourglass-outline-16.svg"
+      }
+    },
+    "idea": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "idea-fill-16.svg",
+        "outline": "idea-outline-16.svg"
+      }
+    },
+    "image": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "image-fill-16.svg",
+        "outline": "image-outline-16.svg"
+      }
+    },
+    "info-circle": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "info-circle-fill-16.svg",
+        "outline": "info-circle-outline-16.svg"
+      }
+    },
+    "info-square": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "info-square-fill-16.svg",
+        "outline": "info-square-outline-16.svg"
+      }
+    },
+    "intersect": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "intersect-fill-16.svg",
+        "outline": "intersect-outline-16.svg"
+      }
+    },
+    "key": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "key-fill-16.svg",
+        "outline": "key-outline-16.svg"
+      }
+    },
+    "keyboard": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "keyboard-fill-16.svg",
+        "outline": "keyboard-outline-16.svg"
+      }
+    },
+    "laptop": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "laptop-fill-16.svg",
+        "outline": "laptop-outline-16.svg"
+      }
+    },
+    "life-ring": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "life-ring-fill-16.svg",
+        "outline": "life-ring-outline-16.svg"
+      }
+    },
+    "lightbulb": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "lightbulb-fill-16.svg",
+        "outline": "lightbulb-outline-16.svg"
+      }
+    },
+    "link": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "link-fill-16.svg",
+        "outline": "link-outline-16.svg"
+      }
+    },
+    "linkedin": {
+      "styles": [
+        "fill"
+      ],
+      "files": {
+        "fill": "linkedin-fill-16.svg"
+      }
+    },
+    "linkedin-square": {
+      "styles": [
+        "fill"
+      ],
+      "files": {
+        "fill": "linkedin-square-fill-16.svg"
+      }
+    },
+    "list": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "list-fill-16.svg",
+        "outline": "list-outline-16.svg"
+      }
+    },
+    "location-pin": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "location-pin-fill-16.svg",
+        "outline": "location-pin-outline-16.svg"
+      }
+    },
+    "lock": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "lock-fill-16.svg",
+        "outline": "lock-outline-16.svg"
+      }
+    },
+    "mail": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "mail-fill-16.svg",
+        "outline": "mail-outline-16.svg"
+      }
+    },
+    "map": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "map-fill-16.svg",
+        "outline": "map-outline-16.svg"
+      }
+    },
+    "math": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "math-fill-16.svg",
+        "outline": "math-outline-16.svg"
+      }
+    },
+    "menu": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "menu-fill-16.svg",
+        "outline": "menu-outline-16.svg"
+      }
+    },
+    "microphone": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "microphone-fill-16.svg",
+        "outline": "microphone-outline-16.svg"
+      }
+    },
+    "minus": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "minus-fill-16.svg",
+        "outline": "minus-outline-16.svg"
+      }
+    },
+    "minus-circle": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "minus-circle-fill-16.svg",
+        "outline": "minus-circle-outline-16.svg"
+      }
+    },
+    "moon": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "moon-fill-16.svg",
+        "outline": "moon-outline-16.svg"
+      }
+    },
+    "more": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "more-fill-16.svg",
+        "outline": "more-outline-16.svg"
+      }
+    },
+    "org-chart": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "org-chart-fill-16.svg",
+        "outline": "org-chart-outline-16.svg"
+      }
+    },
+    "paperclip": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "paperclip-fill-16.svg",
+        "outline": "paperclip-outline-16.svg"
+      }
+    },
+    "paragraph": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "paragraph-fill-16.svg",
+        "outline": "paragraph-outline-16.svg"
+      }
+    },
+    "pause": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "pause-fill-16.svg",
+        "outline": "pause-outline-16.svg"
+      }
+    },
+    "pencil": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "pencil-fill-16.svg",
+        "outline": "pencil-outline-16.svg"
+      }
+    },
+    "percent": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "percent-fill-16.svg",
+        "outline": "percent-outline-16.svg"
+      }
+    },
+    "phone-call": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "phone-call-fill-16.svg",
+        "outline": "phone-call-outline-16.svg"
+      }
+    },
+    "phone-off": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "phone-off-fill-16.svg",
+        "outline": "phone-off-outline-16.svg"
+      }
+    },
+    "pie-chart": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "pie-chart-fill-16.svg",
+        "outline": "pie-chart-outline-16.svg"
+      }
+    },
+    "pin": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "pin-fill-16.svg",
+        "outline": "pin-outline-16.svg"
+      }
+    },
+    "play": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "play-fill-16.svg",
+        "outline": "play-outline-16.svg"
+      }
+    },
+    "plus": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "plus-fill-16.svg",
+        "outline": "plus-outline-16.svg"
+      }
+    },
+    "plus-circle": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "plus-circle-fill-16.svg",
+        "outline": "plus-circle-outline-16.svg"
+      }
+    },
+    "pointer-hand": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "pointer-hand-fill-16.svg",
+        "outline": "pointer-hand-outline-16.svg"
+      }
+    },
+    "pound": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "pound-fill-16.svg",
+        "outline": "pound-outline-16.svg"
+      }
+    },
+    "power": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "power-fill-16.svg",
+        "outline": "power-outline-16.svg"
+      }
+    },
+    "printer": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "printer-fill-16.svg",
+        "outline": "printer-outline-16.svg"
+      }
+    },
+    "profile": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "profile-fill-16.svg",
+        "outline": "profile-outline-16.svg"
+      }
+    },
+    "receipt": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "receipt-fill-16.svg",
+        "outline": "receipt-outline-16.svg"
+      }
+    },
+    "refresh": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "refresh-fill-16.svg",
+        "outline": "refresh-outline-16.svg"
+      }
+    },
+    "reply": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "reply-fill-16.svg",
+        "outline": "reply-outline-16.svg"
+      }
+    },
+    "rewind": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "rewind-fill-16.svg",
+        "outline": "rewind-outline-16.svg"
+      }
+    },
+    "rss": {
+      "styles": [
+        "outline"
+      ],
+      "files": {
+        "outline": "rss-outline-16.svg"
+      }
+    },
+    "save": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "save-fill-16.svg",
+        "outline": "save-outline-16.svg"
+      }
+    },
+    "schedule": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "schedule-fill-16.svg",
+        "outline": "schedule-outline-16.svg"
+      }
+    },
+    "scissors": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "scissors-fill-16.svg",
+        "outline": "scissors-outline-16.svg"
+      }
+    },
+    "search": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "search-fill-16.svg",
+        "outline": "search-outline-16.svg"
+      }
+    },
+    "search-text": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "search-text-fill-16.svg",
+        "outline": "search-text-outline-16.svg"
+      }
+    },
+    "section": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "section-fill-16.svg",
+        "outline": "section-outline-16.svg"
+      }
+    },
+    "send": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "send-fill-16.svg",
+        "outline": "send-outline-16.svg"
+      }
+    },
+    "settings": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "settings-fill-16.svg",
+        "outline": "settings-outline-16.svg"
+      }
+    },
+    "share": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "share-fill-16.svg",
+        "outline": "share-outline-16.svg"
+      }
+    },
+    "shield": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "shield-fill-16.svg",
+        "outline": "shield-outline-16.svg"
+      }
+    },
+    "shopping-cart": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "shopping-cart-fill-16.svg",
+        "outline": "shopping-cart-outline-16.svg"
+      }
+    },
+    "shuffle": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "shuffle-fill-16.svg",
+        "outline": "shuffle-outline-16.svg"
+      }
+    },
+    "sign-in": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "sign-in-fill-16.svg",
+        "outline": "sign-in-outline-16.svg"
+      }
+    },
+    "sign-out": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "sign-out-fill-16.svg",
+        "outline": "sign-out-outline-16.svg"
+      }
+    },
+    "skip-back": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "skip-back-fill-16.svg",
+        "outline": "skip-back-outline-16.svg"
+      }
+    },
+    "sliders": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "sliders-fill-16.svg",
+        "outline": "sliders-outline-16.svg"
+      }
+    },
+    "smartphone": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "smartphone-fill-16.svg",
+        "outline": "smartphone-outline-16.svg"
+      }
+    },
+    "sparkle": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "sparkle-fill-16.svg",
+        "outline": "sparkle-outline-16.svg"
+      }
+    },
+    "square": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "square-fill-16.svg",
+        "outline": "square-outline-16.svg"
+      }
+    },
+    "star": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "star-fill-16.svg",
+        "outline": "star-outline-16.svg"
+      }
+    },
+    "step-backward": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "step-backward-fill-16.svg",
+        "outline": "step-backward-outline-16.svg"
+      }
+    },
+    "strategy": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "strategy-fill-16.svg",
+        "outline": "strategy-outline-16.svg"
+      }
+    },
+    "sun": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "sun-fill-16.svg",
+        "outline": "sun-outline-16.svg"
+      }
+    },
+    "sync": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "sync-fill-16.svg",
+        "outline": "sync-outline-16.svg"
+      }
+    },
+    "tablet": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "tablet-fill-16.svg",
+        "outline": "tablet-outline-16.svg"
+      }
+    },
+    "tag": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "tag-fill-16.svg",
+        "outline": "tag-outline-16.svg"
+      }
+    },
+    "taxi": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "taxi-fill-16.svg",
+        "outline": "taxi-outline-16.svg"
+      }
+    },
+    "team": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "team-fill-16.svg",
+        "outline": "team-outline-16.svg"
+      }
+    },
+    "text": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "text-fill-16.svg",
+        "outline": "text-outline-16.svg"
+      }
+    },
+    "text-add": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "text-add-fill-16.svg",
+        "outline": "text-add-outline-16.svg"
+      }
+    },
+    "text-cursor": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "text-cursor-fill-16.svg",
+        "outline": "text-cursor-outline-16.svg"
+      }
+    },
+    "thumbs-down": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "thumbs-down-fill-16.svg",
+        "outline": "thumbs-down-outline-16.svg"
+      }
+    },
+    "thumbs-up": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "thumbs-up-fill-16.svg",
+        "outline": "thumbs-up-outline-16.svg"
+      }
+    },
+    "toggle": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "toggle-fill-16.svg",
+        "outline": "toggle-outline-16.svg"
+      }
+    },
+    "translate": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "translate-fill-16.svg",
+        "outline": "translate-outline-16.svg"
+      }
+    },
+    "trash": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "trash-fill-16.svg",
+        "outline": "trash-outline-16.svg"
+      }
+    },
+    "travel": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "travel-fill-16.svg",
+        "outline": "travel-outline-16.svg"
+      }
+    },
+    "trending-up": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "trending-up-fill-16.svg",
+        "outline": "trending-up-outline-16.svg"
+      }
+    },
+    "underline": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "underline-fill-16.svg",
+        "outline": "underline-outline-16.svg"
+      }
+    },
+    "undo": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "undo-fill-16.svg",
+        "outline": "undo-outline-16.svg"
+      }
+    },
+    "unlock": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "unlock-fill-16.svg",
+        "outline": "unlock-outline-16.svg"
+      }
+    },
+    "upload": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "upload-fill-16.svg",
+        "outline": "upload-outline-16.svg"
+      }
+    },
+    "user": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "user-fill-16.svg",
+        "outline": "user-outline-16.svg"
+      }
+    },
+    "user-add": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "user-add-fill-16.svg",
+        "outline": "user-add-outline-16.svg"
+      }
+    },
+    "video-camera": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "video-camera-fill-16.svg",
+        "outline": "video-camera-outline-16.svg"
+      }
+    },
+    "volume": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "volume-fill-16.svg",
+        "outline": "volume-outline-16.svg"
+      }
+    },
+    "volume-mute": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "volume-mute-fill-16.svg",
+        "outline": "volume-mute-outline-16.svg"
+      }
+    },
+    "volume-plus": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "volume-plus-fill-16.svg",
+        "outline": "volume-plus-outline-16.svg"
+      }
+    },
+    "vr-glasses": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "vr-glasses-fill-16.svg",
+        "outline": "vr-glasses-outline-16.svg"
+      }
+    },
+    "warning": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "warning-fill-16.svg",
+        "outline": "warning-outline-16.svg"
+      }
+    },
+    "wifi": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "wifi-fill-16.svg",
+        "outline": "wifi-outline-16.svg"
+      }
+    },
+    "wrench": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "wrench-fill-16.svg",
+        "outline": "wrench-outline-16.svg"
+      }
+    },
+    "x-circle": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "x-circle-fill-16.svg",
+        "outline": "x-circle-outline-16.svg"
+      }
+    },
+    "x-twitter": {
+      "styles": [
+        "fill"
+      ],
+      "files": {
+        "fill": "x-twitter-fill-16.svg"
+      }
+    },
+    "youtube": {
+      "styles": [
+        "fill"
+      ],
+      "files": {
+        "fill": "youtube-fill-16.svg"
+      }
+    },
+    "zoom-in": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "zoom-in-fill-16.svg",
+        "outline": "zoom-in-outline-16.svg"
+      }
+    },
+    "zoom-out": {
+      "styles": [
+        "fill",
+        "outline"
+      ],
+      "files": {
+        "fill": "zoom-out-fill-16.svg",
+        "outline": "zoom-out-outline-16.svg"
+      }
+    }
+  }
+}

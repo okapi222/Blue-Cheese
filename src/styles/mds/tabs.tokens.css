@@ -11,15 +11,15 @@
 
 :root {
   /* Colors - Light Theme (Default) */
-  --mds-tabs-text-default: #6E7680;
-  --mds-tabs-text-active: #0070F3;
-  --mds-tabs-text-hover: #0070F3;
+  --mds-tabs-text-default: #333;
+  --mds-tabs-text-active: #2251ff;
+  --mds-tabs-text-hover: #2251ff;
   --mds-tabs-text-disabled: #9CA3AF;
   --mds-tabs-background-default: transparent;
   --mds-tabs-background-active: transparent;
   --mds-tabs-background-hover: rgba(0, 112, 243, 0.05);
-  --mds-tabs-indicator-color: #0070F3;
-  --mds-tabs-indicator-height: 2px;
+  --mds-tabs-indicator-color: #2251ff;
+  --mds-tabs-indicator-height: 4px;
   --mds-tabs-border-color: transparent;
 
   /* Colors - Dark Theme (On Dark) */
@@ -31,7 +31,7 @@
   --mds-tabs-dark-background-active: #0A111A;
   --mds-tabs-dark-background-hover: #252B38;
   --mds-tabs-dark-indicator-color: #FFFFFF;
-  --mds-tabs-dark-indicator-height: 2px;
+  --mds-tabs-dark-indicator-height: 4px;
   --mds-tabs-dark-border-color: transparent;
 
   /* Typography */

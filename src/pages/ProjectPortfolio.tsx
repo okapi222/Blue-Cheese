@@ -22,7 +22,8 @@ import {
   Select,
   Checkbox,
   Modal,
-  Tabs
+  Tabs,
+  Icon
 } from '@ui'
 import type { BadgeVariant, SelectOption, TabItem } from '@ui'
 import './project-portfolio.css'
@@ -278,13 +279,13 @@ function SortableProjectCard({
         <div className="project-card__title-section" onClick={() => onCardClick(project)}>
           <h4 className="project-card__title">{project.name}</h4>
           {project.updates > 0 && (
-            <Badge variant="error" badgeStyle="outlined" size="sm">
+            <Badge variant="error" badgeStyle="filled" size="sm">
               {project.updates}
             </Badge>
           )}
           {hasConflicts && (
             <span className="project-card__warning-icon" title="Resource conflicts">
-              ⚠️
+              <Icon name="warning" size="sm" color="warning" />
             </span>
           )}
         </div>
@@ -300,7 +301,7 @@ function SortableProjectCard({
           </div>
           <div className="project-card__meta-row">
             <span className="project-card__label">Priority:</span>
-            <Badge variant={getPriorityBadgeVariant(project.priority)} badgeStyle="outlined" size="sm">
+            <Badge variant={getPriorityBadgeVariant(project.priority)} badgeStyle="filled" size="sm">
               {project.priority}
             </Badge>
           </div>
@@ -530,13 +531,13 @@ export function ProjectPortfolio() {
             </div>
             <div className="project-detail__info-item">
               <span className="project-detail__label">Status:</span>
-              <Badge variant={getStatusBadgeVariant(selectedProject.status)} badgeStyle="outlined">
+              <Badge variant={getStatusBadgeVariant(selectedProject.status)} badgeStyle="filled">
                 {selectedProject.status}
               </Badge>
             </div>
             <div className="project-detail__info-item">
               <span className="project-detail__label">Priority:</span>
-              <Badge variant={getPriorityBadgeVariant(selectedProject.priority)} badgeStyle="outlined">
+              <Badge variant={getPriorityBadgeVariant(selectedProject.priority)} badgeStyle="filled">
                 {selectedProject.priority}
               </Badge>
             </div>
@@ -598,7 +599,7 @@ export function ProjectPortfolio() {
                 <td>{member.role}</td>
                 <td>{member.allocation}%</td>
                 <td>
-                  <Badge variant={getResourceStatusBadgeVariant(member.status)} badgeStyle="outlined" size="sm">
+                  <Badge variant={getResourceStatusBadgeVariant(member.status)} badgeStyle="filled" size="sm">
                     {member.status}
                   </Badge>
                 </td>
@@ -624,7 +625,9 @@ export function ProjectPortfolio() {
       <div className="project-detail__activity">
         {MOCK_ACTIVITY.map((item) => (
           <div key={item.id} className="activity-item">
-            <div className="activity-item__icon">👤</div>
+            <div className="activity-item__icon">
+              <Icon name="user" size="lg" />
+            </div>
             <div className="activity-item__content">
               <div className="activity-item__header">
                 <span className="activity-item__user">{item.user}</span>
@@ -784,7 +787,7 @@ export function ProjectPortfolio() {
                 <div key={status} className="kanban-column">
                   <div className="kanban-column__header">
                     <h3 className="kanban-column__title">{status}</h3>
-                    <Badge variant="neutral" badgeStyle="outlined" size="sm">
+                    <Badge variant="neutral" badgeStyle="filled" size="sm">
                       {columnProjects.length}
                     </Badge>
                   </div>
@@ -866,7 +869,7 @@ export function ProjectPortfolio() {
                         )}
                         {hasConflicts && (
                           <span className="project-table__warning" title="Resource conflicts">
-                            ⚠️
+                            <Icon name="warning" size="sm" color="warning" />
                           </span>
                         )}
                       </div>

@@ -1,0 +1,117 @@
+/* Icon Component Styles */
+
+.ui-Icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+  vertical-align: middle;
+  user-select: none;
+  font-style: normal;
+}
+
+/* Icon Sizes */
+.ui-Icon--xs {
+  width: var(--mds-icon-size-xs);
+  height: var(--mds-icon-size-xs);
+  font-size: var(--mds-icon-size-xs);
+}
+
+.ui-Icon--sm {
+  width: var(--mds-icon-size-sm);
+  height: var(--mds-icon-size-sm);
+  font-size: var(--mds-icon-size-sm);
+}
+
+.ui-Icon--md {
+  width: var(--mds-icon-size-md);
+  height: var(--mds-icon-size-md);
+  font-size: var(--mds-icon-size-md);
+}
+
+.ui-Icon--lg {
+  width: var(--mds-icon-size-lg);
+  height: var(--mds-icon-size-lg);
+  font-size: var(--mds-icon-size-lg);
+}
+
+.ui-Icon--xl {
+  width: var(--mds-icon-size-xl);
+  height: var(--mds-icon-size-xl);
+  font-size: var(--mds-icon-size-xl);
+}
+
+/* Icon Colors */
+.ui-Icon--default {
+  color: var(--mds-icon-color-default);
+}
+
+.ui-Icon--primary {
+  color: var(--mds-icon-color-primary);
+}
+
+.ui-Icon--success {
+  color: var(--mds-icon-color-success);
+}
+
+.ui-Icon--warning {
+  color: var(--mds-icon-color-warning);
+}
+
+.ui-Icon--danger {
+  color: var(--mds-icon-color-danger);
+}
+
+.ui-Icon--info {
+  color: var(--mds-icon-color-info);
+}
+
+.ui-Icon--disabled {
+  color: var(--mds-icon-color-disabled);
+}
+
+/* SVG-specific styles */
+.ui-Icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+/* IMG tag support for external SVG files */
+.ui-Icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* Apply color via filter for img-based icons */
+.ui-Icon--primary img {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(98%) saturate(2967%) hue-rotate(214deg) brightness(99%) contrast(101%);
+}
+
+.ui-Icon--success img {
+  filter: brightness(0) saturate(100%) invert(26%) sepia(89%) saturate(1583%) hue-rotate(95deg) brightness(96%) contrast(106%);
+}
+
+.ui-Icon--warning img {
+  filter: brightness(0) saturate(100%) invert(77%) sepia(72%) saturate(548%) hue-rotate(359deg) brightness(104%) contrast(101%);
+}
+
+.ui-Icon--danger img {
+  filter: brightness(0) saturate(100%) invert(26%) sepia(97%) saturate(2133%) hue-rotate(343deg) brightness(91%) contrast(90%);
+}
+
+.ui-Icon--info img {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(98%) saturate(2967%) hue-rotate(214deg) brightness(99%) contrast(101%);
+}
+
+.ui-Icon--disabled img {
+  filter: brightness(0) saturate(100%) invert(79%) sepia(0%) saturate(0%) hue-rotate(169deg) brightness(94%) contrast(88%);
+  opacity: 0.5;
+}
+
+.ui-Icon--default img {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(0%) saturate(0%) hue-rotate(158deg) brightness(94%) contrast(89%);
+}

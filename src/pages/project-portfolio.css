@@ -138,6 +138,10 @@
   margin: 0;
 }
 
+.kanban-column__header .ui-Badge {
+  font-size: 1.1rem;
+}
+
 .kanban-column__content {
   flex: 1;
   display: flex;
@@ -266,14 +270,13 @@
 .project-card__progress-bar {
   width: 100%;
   height: 6px;
-  background-color: var(--mds-color-grey-200);
-  border-radius: 3px;
+  background-color: var(--mds-progress-bar-track);
   overflow: hidden;
 }
 
 .project-card__progress-fill {
   height: 100%;
-  background-color: var(--mds-color-electric-blue-500);
+  background-color: var(--mds-progress-bar-fill);
   transition: width 0.3s ease;
 }
 
@@ -380,15 +383,14 @@
 
 .project-table__progress-bar {
   width: 100%;
-  height: 4px;
-  background-color: var(--mds-color-grey-200);
-  border-radius: 2px;
+  height: var(--mds-progress-bar-height-4px);
+  background-color: var(--mds-progress-bar-track);
   overflow: hidden;
 }
 
 .project-table__progress-fill {
   height: 100%;
-  background-color: var(--mds-color-electric-blue-500);
+  background-color: var(--mds-progress-bar-fill);
 }
 
 .table-actions {
@@ -499,15 +501,14 @@
 
 .project-detail__progress-bar {
   width: 100%;
-  height: 8px;
-  background-color: var(--mds-color-grey-200);
-  border-radius: 4px;
+  height: var(--mds-progress-bar-height-8px);
+  background-color: var(--mds-progress-bar-track);
   overflow: hidden;
 }
 
 .project-detail__progress-fill {
   height: 100%;
-  background-color: var(--mds-color-electric-blue-500);
+  background-color: var(--mds-progress-bar-fill);
   transition: width 0.3s ease;
 }
 

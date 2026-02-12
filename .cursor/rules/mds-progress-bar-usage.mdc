@@ -1,0 +1,166 @@
+---
+description: MDS progress bar component token usage requirements
+globs: **/*.{ts,tsx,css}
+alwaysApply: true
+---
+
+# MDS Progress Bar Token Usage
+
+## Critical Rule
+
+**Always use MDS progress bar-specific tokens** (`--mds-progress-bar-*`) when styling progress bars. Never use generic tokens or hard-coded values.
+
+## Available MDS Progress Bar Tokens
+
+Reference: `/src/styles/mds/progress-bar.tokens.css`
+
+### Height Tokens
+```css
+--mds-progress-bar-height-2px: 2px;
+--mds-progress-bar-height-4px: 4px;
+--mds-progress-bar-height-8px: 8px;
+```
+
+### Color Tokens
+```css
+--mds-progress-bar-track: rgba(0, 0, 0, 0.05);
+--mds-progress-bar-fill: var(--mds-color-electric-blue-500);
+--mds-progress-bar-text: var(--mds-color-text-default);
+--mds-progress-bar-text-muted: var(--mds-color-text-subtle);
+```
+
+### Spacing Tokens
+```css
+--mds-progress-bar-gap: 8px;
+```
+
+## Critical: No Border Radius
+
+**Progress bars have no border-radius token** - they should be flat/square, not rounded.
+
+## Examples
+
+### ✅ GOOD - Using MDS Progress Bar Tokens
+
+```css
+.progress-bar {
+  width: 100%;
+  height: var(--mds-progress-bar-height-4px);
+  background-color: var(--mds-progress-bar-track);
+  overflow: hidden;
+  /* NO border-radius */
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--mds-progress-bar-fill);
+  transition: width 0.3s ease;
+}
+```
+
+```css
+/* Different sizes */
+.progress-bar--small {
+  height: var(--mds-progress-bar-height-2px);
+}
+
+.progress-bar--medium {
+  height: var(--mds-progress-bar-height-4px);
+}
+
+.progress-bar--large {
+  height: var(--mds-progress-bar-height-8px);
+}
+```
+
+### ❌ BAD - Using Generic Tokens or Hard-Coded Values
+
+```css
+.progress-bar {
+  height: 6px; /* Wrong - use token */
+  background-color: var(--mds-color-grey-200); /* Wrong - use --mds-progress-bar-track */
+  border-radius: 3px; /* Wrong - no border radius on progress bars */
+}
+
+.progress-fill {
+  background-color: var(--mds-color-electric-blue-500); /* Wrong - use --mds-progress-bar-fill */
+}
+```
+
+```css
+.progress-bar {
+  background: #e5e5e5; /* Wrong - hard-coded color */
+  border-radius: 4px; /* Wrong - no border radius */
+}
+```
+
+## Common Patterns
+
+### Card Progress Bar
+```css
+.card__progress-bar {
+  width: 100%;
+  height: var(--mds-progress-bar-height-4px);
+  background-color: var(--mds-progress-bar-track);
+  overflow: hidden;
+}
+
+.card__progress-fill {
+  height: 100%;
+  background-color: var(--mds-progress-bar-fill);
+  transition: width 0.3s ease;
+}
+```
+
+### Table Progress Bar
+```css
+.table__progress-bar {
+  width: 100%;
+  height: var(--mds-progress-bar-height-2px);
+  background-color: var(--mds-progress-bar-track);
+  overflow: hidden;
+}
+
+.table__progress-fill {
+  height: 100%;
+  background-color: var(--mds-progress-bar-fill);
+}
+```
+
+### Progress with Label
+```css
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mds-progress-bar-gap);
+}
+
+.progress-label {
+  color: var(--mds-progress-bar-text);
+}
+
+.progress-value {
+  color: var(--mds-progress-bar-text-muted);
+}
+```
+
+## Why This Matters
+
+1. **Design Consistency**: Progress bars look the same across the entire application
+2. **Theme Support**: Dark theme variants work automatically with MDS tokens
+3. **Maintainability**: Changes to progress bar styles happen in one place (tokens file)
+4. **Future-Proofing**: When MDS updates, progress bars update automatically
+5. **No Rounded Corners**: MDS progress bars are flat by design - no border-radius token exists
+
+## Verification Checklist
+
+When creating or reviewing progress bar components, ensure:
+
+- [ ] Height uses `--mds-progress-bar-height-*` tokens
+- [ ] Track color uses `--mds-progress-bar-track`
+- [ ] Fill color uses `--mds-progress-bar-fill`
+- [ ] Label colors use `--mds-progress-bar-text` or `--mds-progress-bar-text-muted`
+- [ ] Spacing uses `--mds-progress-bar-gap`
+- [ ] NO `border-radius` property exists
+- [ ] No hard-coded colors or dimensions
+- [ ] No generic color tokens where specific progress bar tokens exist

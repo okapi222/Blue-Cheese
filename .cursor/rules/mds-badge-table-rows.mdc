@@ -1,17 +1,39 @@
-# MDS Badge Style in Table Rows with Buttons
+---
+description: Badge style and sizing patterns for tables and headers
+alwaysApply: true
+---
 
-## Critical Rule
+# MDS Badge Usage Patterns
+
+## Critical Rules
+
+### 1. Badge Style in Table Rows with Buttons
 
 **When table rows contain BOTH status badges AND action buttons, always use `badgeStyle="outlined"` for status badges.**
 
 This prevents visual clashing between filled badges and buttons, ensuring buttons remain the primary actionable elements in the row.
 
-## Why This Rule Matters
+### 2. Badge Sizing in Section Headers
+
+**When badges appear next to section titles or headings, match the badge font size to the adjacent text.**
+
+This creates visual harmony and proper alignment between the badge and the text it accompanies.
+
+## Why These Rules Matter
+
+### Badge Style (Outlined vs Filled)
 
 - **Visual Hierarchy**: Outlined badges have lighter visual weight, allowing buttons to stand out as primary interactive elements
 - **Reduced Clashing**: Filled badges with solid backgrounds compete visually with buttons
 - **Professional Appearance**: Outlined badges create cleaner, more refined table layouts
 - **User Focus**: Action buttons are the primary interactive elements; badges should not draw equal attention
+
+### Badge Sizing
+
+- **Visual Harmony**: Matching badge size to adjacent text creates cohesive, balanced layouts
+- **Readability**: Consistent sizing makes headers and sections easier to scan
+- **Professional Polish**: Mismatched sizes appear unrefined and inconsistent
+- **Hierarchy Preservation**: Properly sized badges complement rather than compete with titles
 
 ## When to Apply This Rule
 
@@ -180,6 +202,8 @@ function getStatusBadge(status: ProjectStatus) {
 
 ## Quick Decision Matrix
 
+### Badge Style
+
 | Context | Has Buttons in Row? | Badge Style |
 |---------|-------------------|-------------|
 | Table row | ✅ Yes | `badgeStyle="outlined"` |
@@ -189,7 +213,20 @@ function getStatusBadge(status: ProjectStatus) {
 | Header section | N/A | `badgeStyle="filled"` or default |
 | Modal content | Depends | Use filled unless buttons compete visually |
 
+### Badge Sizing
+
+| Context | Next to Title/Heading? | Font Size |
+|---------|----------------------|-----------|
+| Section header | ✅ Yes | Match title size (e.g., 1.4em) |
+| Kanban column header | ✅ Yes | Match column title (e.g., 1.1rem) |
+| Card header | ✅ Yes | Match card title (e.g., 1rem) |
+| Table cell | ❌ No | Use default badge size (sm/md) |
+| Body content | ❌ No | Use default badge size (sm/md) |
+| Standalone | N/A | Use default badge size (sm/md) |
+
 ## Implementation Checklist
+
+### For Table Badges
 
 When creating or reviewing table components with status indicators:
 
@@ -198,6 +235,150 @@ When creating or reviewing table components with status indicators:
 - [ ] If both: Are badges using `badgeStyle="outlined"`?
 - [ ] Are helper functions (like `getStatusBadge`) configured to return outlined badges?
 - [ ] Do standalone badge contexts (cards, headers) still use filled badges appropriately?
+
+### For Header Badges
+
+When creating or reviewing section headers with badges:
+
+- [ ] Is the badge next to a title/heading?
+- [ ] Does the header use a custom font size (not body default)?
+- [ ] Is there a CSS rule to match the badge font size to the title?
+- [ ] Have you scoped the sizing rule to the specific header context?
+- [ ] Do table/body badges still use default sizes?
+
+## Badge Sizing in Headers
+
+### The Pattern
+
+When badges appear alongside titles in section headers, kanban columns, or other header contexts, their font size should match the adjacent text for visual coherence.
+
+### ✅ GOOD - Matched Badge Sizing
+
+```css
+/* Kanban column header with title and count badge */
+.kanban-column__title {
+  font-size: 1.1rem;
+  font-weight: var(--mds-font-weight-bold);
+}
+
+.kanban-column__header .ui-Badge {
+  font-size: 1.1rem; /* Matches title */
+}
+```
+
+```tsx
+{/* Section header with title and notification badge */}
+<div className="section-header">
+  <h3 className="section-title">Recent Projects</h3> {/* 1.4em */}
+  <Badge variant="error">3 Updates</Badge> {/* Should also be 1.4em */}
+</div>
+```
+
+```css
+.section-title {
+  font-size: 1.4em;
+}
+
+.section-header .ui-Badge {
+  font-size: 1.4em; /* Matches section title */
+}
+```
+
+### ❌ BAD - Mismatched Badge Sizing
+
+```css
+/* Title is large but badge stays small */
+.kanban-column__title {
+  font-size: 1.1rem;
+}
+
+/* Badge uses default small size - creates visual imbalance */
+.kanban-column__header .ui-Badge {
+  /* No override - will be 0.75rem from default sm size */
+}
+```
+
+### Common Header Patterns
+
+#### Kanban Column Headers
+
+```tsx
+<div className="kanban-column__header">
+  <h3 className="kanban-column__title">In Progress</h3>
+  <Badge variant="neutral" badgeStyle="filled" size="sm">
+    {projectCount}
+  </Badge>
+</div>
+```
+
+```css
+.kanban-column__title {
+  font-size: 1.1rem;
+}
+
+.kanban-column__header .ui-Badge {
+  font-size: 1.1rem; /* Override default sm size */
+}
+```
+
+#### Dashboard Section Headers
+
+```tsx
+<div className="dashboard-section__header">
+  <h2 className="dashboard-section__title">Analytics Overview</h2>
+  <Badge variant="info">Live</Badge>
+</div>
+```
+
+```css
+.dashboard-section__title {
+  font-size: 1.4em;
+}
+
+.dashboard-section__header .ui-Badge {
+  font-size: 1.4em; /* Match title size */
+}
+```
+
+#### Card Headers with Status
+
+```tsx
+<div className="card-header">
+  <h4 className="card-title">Project Status</h4>
+  <Badge variant="success">Complete</Badge>
+</div>
+```
+
+```css
+.card-title {
+  font-size: 1rem;
+}
+
+.card-header .ui-Badge {
+  font-size: 1rem; /* Match card title */
+}
+```
+
+### Why This Matters
+
+- **Visual Harmony**: Matching sizes create cohesive, balanced layouts
+- **Hierarchy**: Properly sized badges don't compete with or undermine title importance
+- **Readability**: Consistent sizing makes headers easier to scan
+- **Professional Appearance**: Mismatched sizes look unpolished
+
+### When to Override Badge Size
+
+Override the default badge size when:
+
+1. Badge appears directly next to a title/heading
+2. Badge is part of a header component (section, column, card)
+3. Badge displays a count or tally related to the header
+4. Default badge size (sm/md/lg) doesn't match adjacent text
+
+**Don't override when:**
+- Badge is in body content (use default sizes)
+- Badge is in a table cell (use default sizes)
+- Badge is standalone without adjacent text
 
 ## See Also
 

@@ -7,13 +7,15 @@ import {
   Checkbox,
   Modal,
   Breadcrumb,
-  TabNav
+  TabNav,
+  Icon
 } from '@ui'
 import type {
   BadgeVariant,
   SelectOption,
   BreadcrumbItem,
-  TabNavItem
+  TabNavItem,
+  IconName
 } from '@ui'
 import './data-import.css'
 
@@ -132,16 +134,16 @@ const MOCK_IMPORT_HISTORY: ImportVersion[] = [
 // HELPER FUNCTIONS
 // ============================================
 
-function getColumnTypeIcon(type: ColumnType): string {
-  const icons: Record<ColumnType, string> = {
-    text: '📝',
-    number: '🔢',
-    date: '📅',
-    boolean: '✓',
-    email: '📧',
-    currency: '💰'
+function getColumnTypeIcon(type: ColumnType): IconName {
+  const icons: Record<ColumnType, IconName> = {
+    text: 'text',
+    number: 'number',
+    date: 'calendar',
+    boolean: 'boolean',
+    email: 'email',
+    currency: 'currency'
   }
-  return icons[type] || '📄'
+  return icons[type] || 'document'
 }
 
 function getValidationBadgeVariant(type: ValidationResult['type']): BadgeVariant {
@@ -476,7 +478,9 @@ export function DataImport() {
           >
             {uploadedFile ? (
               <div className="dropzone-content">
-                <div className="file-icon">📄</div>
+                <div className="file-icon">
+                  <Icon name="document" size="xl" />
+                </div>
                 <p className="file-name">{uploadedFile.name}</p>
                 <p className="file-size">{(uploadedFile.size / 1024).toFixed(2)} KB</p>
                 <p className="file-type">Type: {uploadedFile.type || 'Unknown'}</p>
@@ -491,7 +495,6 @@ export function DataImport() {
               </div>
             ) : (
               <div className="dropzone-content">
-                <div className="upload-icon">⬆️</div>
                 <h3 className="dropzone-title">Drag and drop your file here</h3>
                 <p className="dropzone-subtitle">or</p>
                 <input
@@ -572,7 +575,7 @@ export function DataImport() {
                     </td>
                     <td>
                       <Badge variant="info" badgeStyle="outlined" size="sm">
-                        {getColumnTypeIcon(column.type)} {column.type}
+                        <Icon name={getColumnTypeIcon(column.type)} size="sm" /> {column.type}
                       </Badge>
                     </td>
                     <td className="sample-value">{column.sample}</td>
@@ -819,9 +822,9 @@ export function DataImport() {
             {filteredValidations.map((validation) => (
               <div key={validation.id} className={`validation-item validation-item--${validation.type}`}>
                 <div className="validation-icon">
-                  {validation.type === 'error' && '❌'}
-                  {validation.type === 'warning' && '⚠️'}
-                  {validation.type === 'info' && 'ℹ️'}
+                  {validation.type === 'error' && <Icon name="error" size="md" color="danger" />}
+                  {validation.type === 'warning' && <Icon name="warning" size="md" color="warning" />}
+                  {validation.type === 'info' && <Icon name="info" size="md" color="info" />}
                 </div>
                 <div className="validation-content">
                   <div className="validation-header">

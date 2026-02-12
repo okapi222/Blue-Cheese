@@ -3,6 +3,7 @@
 @import './styles/mds/typography.css';
 @import './styles/mds/elevation.css';
 @import './styles/mds/grid.css';
+@import './styles/mds/icon.tokens.css';
 
 /* Component Tokens */
 @import './styles/mds/accordion.tokens.css';
