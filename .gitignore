@@ -15,6 +15,10 @@ dist-ssr
 # Example and test files — local only, never pushed
 examples/
 
+# McKinsey proprietary fonts — download from https://mds.mckinsey.com/develop/resources/distribution
+# See CONTRIBUTING.md for setup instructions
+public/fonts/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

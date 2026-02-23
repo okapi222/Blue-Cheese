@@ -10,6 +10,30 @@ Blue-Cheese is an internal McKinsey project. All content — including code, des
 git clone https://github.com/okapi222/Blue-Cheese.git
 cd Blue-Cheese
 npm install
+```
+
+### Font Setup (required before running)
+
+McKinsey fonts are proprietary and not included in the repo. You need to download them manually before the app will render correctly.
+
+1. Go to [https://mds.mckinsey.com/develop/resources/distribution](https://mds.mckinsey.com/develop/resources/distribution)
+2. Download the web font files (`.woff2` format) for **McKinsey Sans** and **Bower**
+3. Create a `public/fonts/` folder in the repo root
+4. Place the font files there with these exact names:
+
+```
+public/fonts/
+├── McKinseySans-Light.woff2
+├── McKinseySans-Regular.woff2
+├── McKinseySans-Medium.woff2
+├── McKinseySans-Bold.woff2
+├── Bower-Medium.woff2
+└── Bower-Bold.woff2
+```
+
+The `public/fonts/` folder is gitignored — your font files will never be committed or pushed.
+
+```bash
 npm run dev
 ```
 

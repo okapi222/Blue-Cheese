@@ -4,6 +4,62 @@
  * https://www.figma.com/design/UTyJwVVwPjs9rQwTgxRqFU/MDS-Foundations?node-id=5-133
  */
 
+/* ============================================
+   FONT LOADING
+   Fonts are loaded from /public/fonts/ — see CONTRIBUTING.md for setup.
+   Download font files from https://mds.mckinsey.com/develop/resources/distribution
+   ============================================ */
+
+/* McKinsey Sans — Body font */
+@font-face {
+  font-family: 'McKinsey Sans';
+  src: url('/fonts/McKinseySans-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'McKinsey Sans';
+  src: url('/fonts/McKinseySans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'McKinsey Sans';
+  src: url('/fonts/McKinseySans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'McKinsey Sans';
+  src: url('/fonts/McKinseySans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bower — Display font (44px+ only) */
+@font-face {
+  font-family: 'Bower';
+  src: url('/fonts/Bower-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bower';
+  src: url('/fonts/Bower-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* ============================================
      FONT FAMILIES
