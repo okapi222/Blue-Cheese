@@ -79,6 +79,28 @@ Skills (`.cursor/skills/`) and rules (`.cursor/rules/`) are first-class assets i
 
 ---
 
+## Example and Test Files
+
+When building something to **test or demonstrate** a skill — a sample dashboard, a presentation, a chart, a data file — put it in the `examples/` folder at the root of the repo.
+
+```
+Blue-Cheese/
+├── examples/        ← test and demo files only, never pushed
+│   ├── pages/
+│   ├── components/
+│   ├── data/
+│   └── ...
+├── src/             ← core MDS model only
+├── .cursor/
+└── ...
+```
+
+The `examples/` folder is in `.gitignore` and will never be committed or pushed. This keeps the repo clean and makes it easy to tell core MDS work from one-off experiments.
+
+**The rule:** if you're building a skill or component, it goes in `src/`. If you're testing whether a skill works, it goes in `examples/`.
+
+---
+
 ## Adding a New UI Component
 
 1. Check for an existing token file in `src/styles/mds/`. Create one if it doesn't exist.
