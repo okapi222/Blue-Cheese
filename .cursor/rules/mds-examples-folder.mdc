@@ -1,16 +1,37 @@
-# Example and Test Files Go in `examples/`
+# Example and Test Files Go in `examples/` — NEVER in `src/`
 
 ## Critical Rule
-When creating files to **test, demonstrate, or experiment with** a skill or component, always place them in the `examples/` folder — never in `src/`.
+When creating files to **test, demonstrate, or experiment with** a skill or component, always place them in the `examples/` folder. **Never create test or demo files anywhere inside `src/`**, including `src/pages/`, `src/components/`, or `src/data/`.
+
+## Why `src/` is Off-Limits for Examples
+`src/` is tracked by git and pushed to the shared repository. Any file created there — even temporarily — risks being committed and shared with the whole team. `examples/` is gitignored and permanently local only.
+
+## Prohibited Locations for Test/Demo Files
+
+```
+❌ src/pages/MyTestPage.tsx
+❌ src/pages/MyTestPage.css
+❌ src/components/TestChart.tsx
+❌ src/data/testData.ts
+```
+
+## Correct Locations
+
+```
+✅ examples/pages/MyTestPage.tsx
+✅ examples/pages/MyTestPage.css
+✅ examples/components/TestChart.tsx
+✅ examples/data/testData.ts
+```
 
 ## When This Applies
 - User asks to "test" a skill or rule
 - User asks to "try out", "demo", or "show" a component or pattern
-- User asks to build a sample page, chart, dashboard, or presentation to see how something looks
+- User asks to build a sample page, chart, dashboard, or presentation
 - User asks to create example data or slides
 - Any file whose purpose is to validate or explore rather than to ship
 
-## Where Files Go
+## Full Folder Map
 
 ```
 examples/
@@ -19,23 +40,42 @@ examples/
 ├── data/         ← test data files
 ├── utils/        ← helper scripts for examples
 └── root/         ← standalone HTML/CSS demos
+
+src/              ← core MDS model only, always tracked by git
+├── ui/           ← reusable MDS components
+├── styles/mds/   ← design tokens
+├── pages/        ← CORE pages only (Dashboard, LandingPage)
+└── components/   ← CORE components only (Navigation)
 ```
 
 ## Examples
 
-### ✅ GOOD — test file in examples/
+### ✅ GOOD
 User: "Test the dataviz color skill with a bar chart"
 → Create `examples/pages/BarChartTest.tsx` and `examples/pages/bar-chart-test.css`
 
-### ✅ GOOD — demo data in examples/
 User: "Create some sample slide data to try the presentation skill"
 → Create `examples/data/sampleSlides.ts`
 
-### ❌ BAD — test file in src/
+User: "Show me what the analytics dashboard looks like"
+→ Create `examples/pages/AnalyticsDashboard.tsx`
+
+### ❌ BAD — these will pollute the repo
 User: "Test the dataviz color skill with a bar chart"
-→ Do NOT create `src/pages/BarChartTest.tsx`
+→ ~~`src/pages/BarChartTest.tsx`~~
 
-## Why This Matters
-`examples/` is listed in `.gitignore` and is never committed or pushed to the remote repository. `src/` is the core MDS model and is tracked by git. Mixing test files into `src/` pollutes the repo and confuses collaborators about what is core vs. experimental.
+User: "Show me what the analytics dashboard looks like"
+→ ~~`src/pages/AnalyticsDashboard.tsx`~~
 
-**The rule in one line:** build a skill in `src/`, test a skill in `examples/`.
+## Also Update App.tsx and Navigation.tsx Carefully
+If adding a test page to `examples/` that you want to view in the browser, import it using a relative path from `examples/` — and add a comment marking it as a local-only import:
+
+```tsx
+// LOCAL ONLY — not committed to repo
+import { AnalyticsDashboard } from '../../examples/pages/AnalyticsDashboard'
+```
+
+Never import from `examples/` in a commit meant for the shared repo.
+
+## The Rule in One Line
+Build a skill in `src/`. Test a skill in `examples/`.

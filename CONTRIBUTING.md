@@ -62,6 +62,21 @@ Branch names should be lowercase and hyphen-separated, e.g. `feature/dataviz-lin
 4. At least one approval is required before merging.
 5. Periodically, `develop` is merged into `main` by the repo owner.
 
+### ⚠️ Never use `git add .`
+
+Always stage specific files by name. `git add .` sweeps up everything in your working directory — including untracked test files in `src/pages/` — and risks accidentally committing example files to the repo.
+
+```bash
+# ✅ Safe — only commits what you intend
+git add src/styles/mds/new-token.css
+git add .cursor/skills/my-new-skill/SKILL.md
+
+# ❌ Risky — may accidentally include local test files
+git add .
+git add src/
+git add src/pages/
+```
+
 ---
 
 ## Core MDS Rules
