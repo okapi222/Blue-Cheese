@@ -1,0 +1,41 @@
+# Example and Test Files Go in `examples/`
+
+## Critical Rule
+When creating files to **test, demonstrate, or experiment with** a skill or component, always place them in the `examples/` folder — never in `src/`.
+
+## When This Applies
+- User asks to "test" a skill or rule
+- User asks to "try out", "demo", or "show" a component or pattern
+- User asks to build a sample page, chart, dashboard, or presentation to see how something looks
+- User asks to create example data or slides
+- Any file whose purpose is to validate or explore rather than to ship
+
+## Where Files Go
+
+```
+examples/
+├── pages/        ← sample pages and views
+├── components/   ← demo components
+├── data/         ← test data files
+├── utils/        ← helper scripts for examples
+└── root/         ← standalone HTML/CSS demos
+```
+
+## Examples
+
+### ✅ GOOD — test file in examples/
+User: "Test the dataviz color skill with a bar chart"
+→ Create `examples/pages/BarChartTest.tsx` and `examples/pages/bar-chart-test.css`
+
+### ✅ GOOD — demo data in examples/
+User: "Create some sample slide data to try the presentation skill"
+→ Create `examples/data/sampleSlides.ts`
+
+### ❌ BAD — test file in src/
+User: "Test the dataviz color skill with a bar chart"
+→ Do NOT create `src/pages/BarChartTest.tsx`
+
+## Why This Matters
+`examples/` is listed in `.gitignore` and is never committed or pushed to the remote repository. `src/` is the core MDS model and is tracked by git. Mixing test files into `src/` pollutes the repo and confuses collaborators about what is core vs. experimental.
+
+**The rule in one line:** build a skill in `src/`, test a skill in `examples/`.
