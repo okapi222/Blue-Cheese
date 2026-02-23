@@ -13,6 +13,7 @@ export type SelectProps = {
   placeholder?: string
   disabled?: boolean
   className?: string
+  id?: string
 }
 
 export function Select({ 
@@ -21,7 +22,8 @@ export function Select({
   options, 
   placeholder = 'Select...', 
   disabled = false,
-  className = ''
+  className = '',
+  id
 }: SelectProps) {
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     onChange(e.target.value)
@@ -31,6 +33,7 @@ export function Select({
 
   return (
     <select
+      id={id}
       className={classes}
       value={value}
       onChange={handleChange}
