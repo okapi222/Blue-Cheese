@@ -7,7 +7,6 @@ export function Navigation() {
   const pages = [
     { path: '/', label: 'Home', description: 'Landing Page' },
     { path: '/dashboard', label: 'Dashboard', description: 'Basic Dashboard' },
-    { path: '/analytics', label: 'Analytics Dashboard', description: 'Scrolling executive dashboard' },
   ]
 
   return (
