@@ -85,6 +85,11 @@
   background: var(--mds-color-neutral-2);
 }
 
+/* Presentation route: no nav, content fills viewport */
+.app-content.app-content--full-bleed {
+  margin-left: 0;
+}
+
 @media (max-width: 768px) {
   .app-navigation {
     width: 100%;

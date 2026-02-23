@@ -5,7 +5,19 @@ description: Analyzes ALL MDS design system corrections and proactively suggests
 
 # MDS Rule Builder
 
-This skill helps you recognize when MDS design system corrections represent patterns worth capturing, then guides the creation or update of rules to preserve that knowledge.
+This skill helps you recognize when MDS design system corrections represent patterns worth capturing, then guides creation or updates to the correct governance layer (Skill-first, Rule for guardrails).
+
+## Framework Routing (Required First Step)
+
+Before proposing any guidance update, classify the target:
+
+1. **React path**: user/code mentions TSX, `@ui`, `src/ui`, React components/wrappers.
+2. **Vanilla path**: user asks for pure HTML/CSS/JS, static templates, or framework-agnostic implementation.
+
+Routing behavior:
+- **Vanilla path**: prefer updating/creating Skills under `.cursor/skills/` (especially `mds-vanilla-*`).
+- **React path**: use existing React-oriented skills/rules.
+- **Rules**: reserve for strict guardrails that must always apply across contexts.
 
 ## When to Use This Skill
 
@@ -55,7 +67,7 @@ When evaluating a single correction, ask:
 3. **Does it reflect a design principle?** (not just a random fix)
 4. **Is the pattern generalizable?** (applies beyond this specific instance)
 
-If **YES** to 2+ questions → Suggest creating/updating a rule
+If **YES** to 2+ questions → Suggest creating/updating a skill (or rule for guardrails)
 If **NO** to most → Acknowledge the fix but skip rule suggestion
 
 **Examples of worth capturing:**
@@ -88,20 +100,26 @@ Articulate the underlying rule being enforced:
 - What is the incorrect pattern being replaced?
 - Why does this matter? (performance, consistency, maintainability)
 
-### Step 3: Check Existing Rules
+### Step 3: Check Existing Guidance
 
-Before suggesting a new rule, check if it's already covered:
+Before suggesting new guidance, check if it's already covered:
 
-1. **Read all existing rules**: List and read `.cursor/rules/*.mdc` files
-2. **Check AGENTS.md**: Review for related guidance in the main MDS documentation
+1. **Read existing skills**: List/read `.cursor/skills/*/SKILL.md` files
+2. **Read existing rules**: List/read `.cursor/rules/*.mdc` files (guardrails)
+3. **Check AGENTS.md**: Review for related guidance in the main MDS documentation
 3. **Classify the pattern**:
    - **Already fully covered**: No action needed, just mention which rule covers it
-   - **Partially covered**: Consider updating existing rule with new example
-   - **Not covered**: Propose creating a new rule
+   - **Partially covered**: Consider updating existing skill/rule with new example
+   - **Not covered**: Propose creating a new skill (default) or rule (guardrail case)
 
-### Step 4: Determine Scope
+### Step 4: Determine Scope and Layer
 
-Decide the rule's applicability:
+Decide applicability and whether guidance belongs in a Skill or Rule:
+
+**Skill (default)**:
+- Decision frameworks, examples, implementation playbooks
+- Context-dependent patterns (layout, spacing, component styling, token usage by context)
+- Framework-specific guidance (React-only or Vanilla-only)
 
 **Always Apply** (`alwaysApply: true`):
 - Universal MDS principles (token usage, component imports)
@@ -119,9 +137,10 @@ Decide the rule's applicability:
 ### Step 5: Classify Action
 
 Determine what to do:
-- **No Action**: Already covered by existing rule (inform user)
-- **Update Existing**: Add example or clarification to existing rule
-- **Create New**: Write a new rule file
+- **No Action**: Already covered by existing guidance (inform user)
+- **Update Existing**: Add clarification to existing skill/rule
+- **Create New Skill**: Default path for reusable guidance
+- **Create New Rule**: Only for strict always-on guardrails
 
 ## Rule Drafting Templates
 
@@ -419,17 +438,15 @@ Follow these patterns based on existing rules in `.cursor/rules/`:
 
 ### Prefix Patterns
 - `mds-` → MDS design system patterns
-- `mds-[component]-` → Component-specific rules (e.g., `mds-table-patterns`, `mds-button-spacing`)
-- `mds-[category]-` → Category rules (e.g., `mds-bower-typography`, `mds-data-visualization`)
+- `mds-[component]-` → Component-specific rules (e.g., `mds-table-patterns`)
+- `mds-[category]-` → Category rules (e.g., `mds-bower-typography`)
 
 ### Name Structure
 - `[prefix]-[what]-[aspect].mdc`
 - Examples:
   - `mds-table-patterns.mdc` (component patterns)
-  - `mds-button-spacing.mdc` (component spacing)
   - `mds-bower-typography.mdc` (typography rules)
-  - `mds-dashboard-background.mdc` (layout rules)
-  - `mds-tabs-usage.mdc` (component usage)
+  - `mds-ui-usage.mdc` (UI guardrail rules)
 
 ### Naming Guidelines
 - Use descriptive, specific names
@@ -444,8 +461,8 @@ Follow these patterns based on existing rules in `.cursor/rules/`:
 When analyzing patterns, reference:
 
 1. **AGENTS.md**: Core MDS workflow and design system structure
-2. **Existing rules**: `.cursor/rules/*.mdc` (currently 10 MDS rules)
-3. **Skills**: `.cursor/skills/badge-variant-selection/SKILL.md` (example skill)
+2. **Existing rules**: `.cursor/rules/*.mdc` (currently core guardrails only)
+3. **Skills**: `.cursor/skills/*/SKILL.md` (primary MDS guidance)
 
 ### Current MDS Rules (Reference)
 
@@ -453,13 +470,14 @@ Existing rules you should be aware of:
 - `mds-table-patterns.mdc` - Table layout, no flex in cells
 - `mds-ui-usage.mdc` - Component imports from @ui
 - `mds-bower-typography.mdc` - Bower font restrictions
-- `mds-banner-dashboard-sizing.mdc` - Typography sizing standards
-- `mds-tabs-usage.mdc` - Tabs token usage
-- `mds-dashboard-background.mdc` - Dashboard backgrounds with cards
-- `mds-button-spacing.mdc` - Button spacing requirements
-- `mds-data-visualization.mdc` - Solid colors for charts
-- `mds-tab-nav-spacing.mdc` - Tab navigation spacing
-- `mds-badge-table-rows.mdc` - Badge patterns in tables
+
+### Current MDS Skills (Reference)
+
+Primary MDS guidance skills:
+- `badge-variant-selection/SKILL.md` - Badge style and header sizing decisions
+- `mds-layout-patterns/SKILL.md` - Banner/dashboard sizing, spacing, tab/content spacing
+- `mds-token-usage/SKILL.md` - Tabs and progress-bar token usage
+- `mds-data-visualization/SKILL.md` - Solid-color chart styling
 
 ## Example Workflows
 

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presentation Scroll</title>
+    <link rel="stylesheet" href="/src/styles/mds/colors.css" />
+    <link rel="stylesheet" href="/src/styles/mds/typography.css" />
+    <link rel="stylesheet" href="/src/styles/mds/elevation.css" />
+    <link rel="stylesheet" href="/src/styles/mds/grid.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <nav class="section-nav" aria-label="Slide sections">
+        <a href="#title" class="section-nav__link is-active">Title</a>
+        <a href="#three-columns" class="section-nav__link">3 Columns</a>
+        <a href="#pie-charts" class="section-nav__link">Pie Charts</a>
+        <a href="#flow-chart" class="section-nav__link">Flow Chart</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="title" class="slide slide--light">
+        <div class="slide__content reveal">
+          <span class="pill">Presentation</span>
+          <h1 class="hero-title">
+            <span>Lorem Ipsum</span>
+            <span>PowerPoint Style Deck</span>
+          </h1>
+          <p class="hero-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="hero-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
+            venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis.
+          </p>
+          <a class="cta-button" href="#three-columns">Next slide</a>
+        </div>
+      </section>
+
+      <section id="three-columns" class="slide slide--dark">
+        <div class="slide__content reveal">
+          <span class="pill">Layout</span>
+          <h2 class="slide-title">Three Column Layout</h2>
+          <p class="slide-subtitle">Lorem ipsum content blocks in a classic slide format.</p>
+          <div class="grid-3">
+            <article class="lift-card content-card">
+              <h3>Column One</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam.
+                Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              </p>
+            </article>
+            <article class="lift-card content-card">
+              <h3>Column Two</h3>
+              <p>
+                Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus
+                sit amet fermentum. Maecenas faucibus mollis interdum.
+              </p>
+            </article>
+            <article class="lift-card content-card">
+              <h3>Column Three</h3>
+              <p>
+                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id
+                dolor id nibh ultricies vehicula ut id elit.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="pie-charts" class="slide slide--light">
+        <div class="slide__content reveal">
+          <span class="pill">Data</span>
+          <h2 class="slide-title">Two Pie Charts</h2>
+          <p class="slide-subtitle">Lorem ipsum distribution examples with dummy values.</p>
+          <div class="pie-grid">
+            <article class="lift-card pie-card">
+              <h3>Market Split</h3>
+              <div
+                class="pie pie--one"
+                role="img"
+                aria-label="Pie chart with segments 45 percent, 30 percent, and 25 percent"
+              ></div>
+              <ul class="legend">
+                <li><span class="legend-swatch legend-swatch--blue"></span>Lorem A - 45%</li>
+                <li><span class="legend-swatch legend-swatch--green"></span>Lorem B - 30%</li>
+                <li><span class="legend-swatch legend-swatch--orange"></span>Lorem C - 25%</li>
+              </ul>
+            </article>
+            <article class="lift-card pie-card">
+              <h3>Channel Mix</h3>
+              <div
+                class="pie pie--two"
+                role="img"
+                aria-label="Pie chart with segments 50 percent, 20 percent, 15 percent, and 15 percent"
+              ></div>
+              <ul class="legend">
+                <li><span class="legend-swatch legend-swatch--purple"></span>Ipsum X - 50%</li>
+                <li><span class="legend-swatch legend-swatch--teal"></span>Ipsum Y - 20%</li>
+                <li><span class="legend-swatch legend-swatch--pink"></span>Ipsum Z - 15%</li>
+                <li><span class="legend-swatch legend-swatch--gray"></span>Ipsum W - 15%</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="flow-chart" class="slide slide--dark">
+        <div class="slide__content reveal">
+          <span class="pill">Process</span>
+          <h2 class="slide-title">Flow Chart</h2>
+          <p class="slide-subtitle">A simple lorem ipsum process from input to output.</p>
+          <div class="flow-chart" aria-label="Flow chart showing a four-step process">
+            <div class="flow-node">Start</div>
+            <div class="flow-arrow" aria-hidden="true">↓</div>
+            <div class="flow-node">Analyze</div>
+            <div class="flow-arrow" aria-hidden="true">↓</div>
+            <div class="flow-node">Design</div>
+            <div class="flow-arrow" aria-hidden="true">↓</div>
+            <div class="flow-node">Deliver</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

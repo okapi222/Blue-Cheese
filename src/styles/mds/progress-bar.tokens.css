@@ -14,11 +14,13 @@
 
   /* ============================================
      PROGRESS BAR COLORS
+     Uses MDS data visualization palette
      ============================================ */
   --mds-progress-bar-track: rgba(0, 0, 0, 0.05);
   --mds-progress-bar-track-dark: rgba(255, 255, 255, 0.2);
 
-  --mds-progress-bar-fill: var(--mds-color-electric-blue-500);
+  /* Single-category visualization: Deep Blue 900 on white, Cyan 500 on dark */
+  --mds-progress-bar-fill: var(--mds-color-deep-blue-900);
   --mds-progress-bar-fill-dark: var(--mds-color-cyan-500);
 
   --mds-progress-bar-text: var(--mds-color-text-default);

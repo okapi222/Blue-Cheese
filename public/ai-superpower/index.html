@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI as a Superpower for Product Managers</title>
+  <link rel="stylesheet" href="/ai-superpower.css" />
+</head>
+<body>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <div class="scroll-progress__fill" id="scrollProgressFill"></div>
+  </div>
+
+  <!-- Floating nav (visible on scroll) -->
+  <nav class="floating-nav" id="floatingNav" aria-label="Page sections">
+    <div class="floating-nav__pill">
+      <a href="#intro" class="floating-nav__link">Intro</a>
+      <a href="#challenge" class="floating-nav__link">Challenge</a>
+      <a href="#opportunity" class="floating-nav__link">Opportunity</a>
+      <a href="#superpower" class="floating-nav__link">Superpower</a>
+      <a href="#framework" class="floating-nav__link">Framework</a>
+      <a href="#sessions" class="floating-nav__link">Sessions</a>
+      <a href="#impact" class="floating-nav__link">Impact</a>
+      <a href="#success" class="floating-nav__link">Success</a>
+      <a href="#global-map" class="floating-nav__link">Global Map</a>
+      <a href="#commit" class="floating-nav__link">Commit</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Section 1: Intro (Hero) -->
+    <section id="intro" class="section section--hero">
+      <div class="hero__content animate-in is-visible">
+        <span class="badge badge--tag">CPO-Sponsored Initiative</span>
+        <h1 class="hero__title">AI as a Superpower<br />for Product Managers</h1>
+        <p class="hero__subhead">Not training. A behavior-change engine at scale.</p>
+        <p class="hero__desc">
+          Demo or die. We scale through inspiration and demonstration — real PMs doing real work differently with tools like
+          <span class="cursor-badge"><span class="cursor-badge__icon" aria-hidden="true">⌘</span> Cursor</span>.
+          Change at least one workflow, not just "use a tool."
+        </p>
+        <a href="#framework" class="btn btn--primary btn--lg">
+          <span class="btn__icon" aria-hidden="true">⚡</span>
+          Explore the Approach
+        </a>
+      </div>
+      <div class="hero__scroll-hint animate-in is-visible" aria-hidden="true">
+        <span class="scroll-hint__arrow">↓</span>
+      </div>
+    </section>
+
+    <!-- Section 2: Challenge -->
+    <section id="challenge" class="section">
+      <div class="section__inner">
+        <span class="section__label">The Challenge</span>
+        <h2 class="section__title">Why This Matters Now</h2>
+        <p class="section__lead">
+          We've made strong progress with AI — now it's time to come together and unlock its full potential across every PM workflow.
+        </p>
+        <div class="cards cards--three">
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">💡</div>
+            <h3 class="card__title">From Inspiration to Application</h3>
+            <p class="card__text">We've nailed the wow — now let's nail the how so every session translates into real workflow change.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">📊</div>
+            <h3 class="card__title">Built for Every Level</h3>
+            <p class="card__text">From first steps to power users — every PM deserves a path that matches their experience and ambition.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">⏱</div>
+            <h3 class="card__title">Now Is the Moment</h3>
+            <p class="card__text">Leadership is all in, the tools are ready, and our PMs are eager. The conditions have never been better.</p>
+          </article>
+        </div>
+        <h3 class="subsection__title">Risks We Must Avoid</h3>
+        <div class="risks">
+          <div class="risk">
+            <strong class="risk__title">Over-Formalization</strong>
+            <span class="risk__desc">Too structured → too slow to ship</span>
+          </div>
+          <div class="risk">
+            <strong class="risk__title">Over-Optional</strong>
+            <span class="risk__desc">Too loose → low adoption and impact</span>
+          </div>
+          <div class="risk">
+            <strong class="risk__title">One-Size-Fits-All</strong>
+            <span class="risk__desc">Generic approach → loss of PM trust</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Opportunity -->
+    <section id="opportunity" class="section">
+      <div class="section__inner">
+        <span class="section__label">The Opportunity</span>
+        <h2 class="section__title">What We're Achieving</h2>
+        <p class="section__lead">
+          We've seen incredible demos and experimentation across our PM community. The next step is embedding AI consistently into how we work every day.
+        </p>
+        <div class="cards cards--two">
+          <article class="card">
+            <h3 class="card__title">Higher Quality Output</h3>
+            <p class="card__text">AI helps us explore more options, catch blind spots, and produce clearer artifacts — from PRDs to stakeholder comms.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Faster Execution</h3>
+            <p class="card__text">What used to take hours can now take minutes. We spend less time on first drafts and more time on iteration and decisions.</p>
+          </article>
+        </div>
+        <blockquote class="pull-quote">
+          "The goal isn't to use AI more — it's to do better PM work with AI as your partner."
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Section 4: Superpower -->
+    <section id="superpower" class="section">
+      <div class="section__inner">
+        <h2 class="section__title">What "AI as a Superpower" Means</h2>
+        <p class="section__lead">It's about partnership, not replacement. AI handles the heavy lifting so we can focus on what only humans can do.</p>
+        <div class="two-cols">
+          <div class="two-cols__col">
+            <h3 class="two-cols__heading">AI Helps With</h3>
+            <ul class="list list--bullets">
+              <li>Drafting PRDs and specs</li>
+              <li>Ideating and brainstorming</li>
+              <li>Synthesizing research and feedback</li>
+              <li>Exploring solution options</li>
+              <li>Creating communication drafts</li>
+              <li>Analyzing competitive data</li>
+              <li>Sprint ceremonies</li>
+              <li>Backlog management and prioritization</li>
+              <li>Team health</li>
+            </ul>
+          </div>
+          <div class="two-cols__col">
+            <h3 class="two-cols__heading">PMs Own</h3>
+            <ul class="list list--bullets">
+              <li>Framing the right problems</li>
+              <li>Making final decisions</li>
+              <li>Navigating trade-offs</li>
+              <li>Owning outcomes</li>
+              <li>Stakeholder relationships</li>
+              <li>Product vision and strategy</li>
+            </ul>
+          </div>
+        </div>
+        <p class="superpower__tagline">AI proposes. PMs decide.</p>
+        <div class="callout">
+          <h3 class="callout__title">Our AI Partner</h3>
+          <p class="callout__badge"><span class="cursor-badge"><span class="cursor-badge__icon" aria-hidden="true">⌘</span> Cursor</span></p>
+          <p class="callout__text">AI-native editor for structured documentation, drafting, and collaborative PM work</p>
+          <p class="callout__support">Cursor embodies the "AI proposes, PMs decide" principle.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Framework -->
+    <section id="framework" class="section">
+      <div class="section__inner">
+        <h2 class="section__title">The Framework</h2>
+        <h3 class="section__subtitle">PM AI Maturity Model</h3>
+        <p class="section__lead">Four working modes PMs choose from based on task, risk, and context. Level 3 is our shared target.</p>
+        <div class="maturity-levels">
+          <div class="maturity-level">
+            <span class="maturity-level__num">L1</span>
+            <span class="maturity-level__name">No AI</span>
+            <span class="maturity-level__desc">Purely manual PM work</span>
+          </div>
+          <div class="maturity-level">
+            <span class="maturity-level__num">L2</span>
+            <span class="maturity-level__name">AI for Clarity</span>
+            <span class="maturity-level__desc">AI helps express thinking better</span>
+          </div>
+          <div class="maturity-level maturity-level--target">
+            <span class="maturity-level__num">L3</span>
+            <span class="maturity-level__name">AI-Accelerated Delivery <em>(Target)</em></span>
+            <span class="maturity-level__desc">AI proposes, PMs decide</span>
+          </div>
+          <div class="maturity-level">
+            <span class="maturity-level__num">L4</span>
+            <span class="maturity-level__name">Agentic</span>
+            <span class="maturity-level__desc">AI executes, PMs govern</span>
+          </div>
+        </div>
+        <div class="comb">
+          <h3 class="subsection__title">Grounded in COM-B</h3>
+          <h4 class="comb__subtitle">Not Training. A Behavior-Change Engine at Scale.</h4>
+          <p class="section__lead">
+            Our program is built on the COM-B model — an evidence-based framework that shows behavior change requires all three conditions to be met simultaneously.
+          </p>
+          <p class="comb__equation">Capability + Opportunity + Motivation = Behavior Change</p>
+          <div class="comb__blocks">
+            <div class="comb-block">
+              <h4 class="comb-block__title">Capability — Knowledge &amp; Skills</h4>
+              <p class="comb-block__text">Foundation training and demo sessions build the AI skills and knowledge PMs need to work differently.</p>
+            </div>
+            <div class="comb-block">
+              <h4 class="comb-block__title">Opportunity — Environment &amp; Support</h4>
+              <p class="comb-block__text">Clinics, labs, and community create the environment and social support to practice and experiment.</p>
+            </div>
+            <div class="comb-block">
+              <h4 class="comb-block__title">Motivation — Drive &amp; Confidence</h4>
+              <p class="comb-block__text">Leadership sponsorship, peer demos, and commitment moments drive the will to change.</p>
+            </div>
+          </div>
+          <p class="comb__attribution">Based on the COM-B model (Michie, van Stralen &amp; West, 2011)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Sessions -->
+    <section id="sessions" class="section">
+      <div class="section__inner">
+        <h2 class="section__title">Session Model</h2>
+        <h3 class="section__subtitle">Four session types designed to build capability at every level.</h3>
+        <div class="session-cards">
+          <article class="session-card" data-session="1">
+            <div class="session-card__main">
+              <h3 class="session-card__title">Weekly Demo Sessions — "How do I PM with AI"</h3>
+              <p class="session-card__subtitle">Broadcast &amp; Inspire</p>
+              <p class="session-card__meta">Remote · 30 min · Weekly</p>
+              <p class="session-card__summary">Live demos of real PMs doing real work differently. PRD creation, roadmapping, stakeholder prep, experiment design. "Demo or die."</p>
+              <div class="session-card__tags">
+                <span class="tag">Cursor</span>
+                <span class="tag">Capability</span>
+                <span class="tag">Motivation</span>
+              </div>
+              <button type="button" class="session-card__toggle" aria-expanded="false" aria-controls="session-detail-1" id="session-toggle-1">Learn more</button>
+            </div>
+            <div class="session-card__detail" id="session-detail-1" hidden>
+              <p>Join weekly 30-minute sessions where PMs share live demos of real work: PRD creation, roadmapping, stakeholder prep, and experiment design. The focus is on "demo or die" — showing, not telling.</p>
+            </div>
+          </article>
+          <article class="session-card" data-session="2">
+            <div class="session-card__main">
+              <h3 class="session-card__title">Hands-on AI PM: Change the Way We Work</h3>
+              <p class="session-card__subtitle">Craft &amp; Confidence</p>
+              <p class="session-card__meta">Remote · 60–90 min · Weekly / Bi-weekly</p>
+              <p class="session-card__summary">Bring a painful workflow you want to improve with AI, or one you've already tried. The group helps reframe, improve prompts, and identify repeatable patterns.</p>
+              <div class="session-card__tags">
+                <span class="tag">Cursor</span>
+                <span class="tag">Capability</span>
+                <span class="tag">Opportunity</span>
+              </div>
+              <button type="button" class="session-card__toggle" aria-expanded="false" aria-controls="session-detail-2" id="session-toggle-2">Learn more</button>
+            </div>
+            <div class="session-card__detail" id="session-detail-2" hidden>
+              <p>Bring a real workflow you want to improve. The group helps reframe problems, improve prompts, and identify patterns you can reuse. 60–90 minutes, weekly or bi-weekly.</p>
+            </div>
+          </article>
+          <article class="session-card" data-session="3">
+            <div class="session-card__main">
+              <h3 class="session-card__title">Cursor for Product Managers</h3>
+              <p class="session-card__subtitle">10X PM Enablement</p>
+              <p class="session-card__meta">60 min · Instructor-led · Demo-heavy</p>
+              <p class="session-card__summary">Become a 10X PM: index data, connect to your stack (Jira, Confluence, GitHub, Ideation Agent), analyze codebases, ship specs &amp; prototypes directly. Three live demos included.</p>
+              <div class="session-card__tags">
+                <span class="tag">Cursor</span>
+                <span class="tag">Capability</span>
+              </div>
+              <button type="button" class="session-card__toggle" aria-expanded="false" aria-controls="session-detail-3" id="session-toggle-3">Learn more</button>
+            </div>
+            <div class="session-card__detail" id="session-detail-3" hidden>
+              <p>Instructor-led session with three live demos: indexing data, connecting to Jira/Confluence/GitHub/Ideation Agent, and analyzing codebases to ship specs and prototypes.</p>
+            </div>
+          </article>
+          <article class="session-card" data-session="4">
+            <div class="session-card__main">
+              <h3 class="session-card__title">In-Person Knowledge Day</h3>
+              <p class="session-card__subtitle">Depth &amp; Commitment</p>
+              <p class="session-card__meta">In-person · Full day · Quarterly (Q1: March)</p>
+              <p class="session-card__summary">Leadership context, live demos, role-specific breakout workshops, hands-on labs, and a commitment moment: each PM defines 1 workflow to change.</p>
+              <div class="session-card__tags">
+                <span class="tag">Cursor</span>
+                <span class="tag">Capability</span>
+                <span class="tag">Opportunity</span>
+                <span class="tag">Motivation</span>
+              </div>
+              <button type="button" class="session-card__toggle" aria-expanded="false" aria-controls="session-detail-4" id="session-toggle-4">Learn more</button>
+            </div>
+            <div class="session-card__detail" id="session-detail-4" hidden>
+              <p>Full-day in-person event: leadership context, live demos, role-specific breakouts, hands-on labs, and a commitment moment where each PM defines one workflow to change. Q1: March.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Success -->
+    <section id="success" class="section">
+      <div class="section__inner">
+        <h2 class="section__title">What Success Looks Like</h2>
+        <p class="section__lead">Here's how we'll know AI has become a true superpower in our workflow.</p>
+        <ul class="success-list">
+          <li>PMs can create, review, and comment on any document with Cursor</li>
+          <li>Cursor is set up and used for daily PM tasks</li>
+          <li>Cursor integrates with MCP — Atlassian, GitHub, Ideation Agent, and more</li>
+          <li>PRDs sit at the center of the AI-DLC — clearer, more comprehensive, and faster to produce</li>
+          <li>Cursor becomes your Senior AI PM Buddy — opening new horizons and helping you deliver faster with higher quality</li>
+          <li>Quality goes up while time-to-delivery goes down</li>
+          <li>PMs have more energy for strategic thinking and stakeholder work</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 8: Global Map -->
+    <section id="global-map" class="section">
+      <div class="section__inner">
+        <h2 class="section__title">Our Global PM Community</h2>
+        <p class="section__stat" id="globalStat">329 Product Management &amp; Design People across 4 regions</p>
+        <p class="section__lead">From New York to Delhi, our community is building the future of PM craft — together.</p>
+        <div class="map-filters">
+          <div class="map-filters__group">
+            <span class="map-filters__label">Filter by Role:</span>
+            <div class="map-filters__buttons" role="group" aria-label="Filter by role">
+              <button type="button" class="filter-btn filter-btn--active" data-filter="role" data-value="all">All Roles</button>
+              <button type="button" class="filter-btn" data-filter="role" data-value="pm">Product Management</button>
+              <button type="button" class="filter-btn" data-filter="role" data-value="design">Design</button>
+              <button type="button" class="filter-btn" data-filter="role" data-value="research">Design Research</button>
+              <button type="button" class="filter-btn" data-filter="role" data-value="adoption">Product Adoption</button>
+              <button type="button" class="filter-btn" data-filter="role" data-value="agile">Agile &amp; Other</button>
+            </div>
+          </div>
+          <div class="map-filters__group">
+            <span class="map-filters__label">Filter by Region:</span>
+            <div class="map-filters__buttons" role="group" aria-label="Filter by region">
+              <button type="button" class="filter-btn filter-btn--active" data-filter="region" data-value="all">All Regions</button>
+              <button type="button" class="filter-btn" data-filter="region" data-value="na">North America</button>
+              <button type="button" class="filter-btn" data-filter="region" data-value="apac">Asia-Pacific</button>
+              <button type="button" class="filter-btn" data-filter="region" data-value="emea">EMEA</button>
+              <button type="button" class="filter-btn" data-filter="region" data-value="latam">Latin America</button>
+            </div>
+          </div>
+        </div>
+        <div class="map-container">
+          <div class="map-placeholder" id="mapPlaceholder">
+            <svg class="map-svg" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="800" height="400" fill="var(--mds-color-background-subtle)" />
+              <!-- Simplified land outline -->
+              <path class="map-land" fill="var(--mds-color-neutral-10)" d="M 200 120 L 280 100 L 320 140 L 300 180 L 220 200 L 180 160 Z M 400 80 L 520 60 L 580 120 L 560 200 L 480 220 L 400 180 Z M 100 200 L 180 180 L 240 220 L 220 280 L 140 300 Z M 600 140 L 700 120 L 760 180 L 720 260 L 620 240 Z" />
+              <g id="mapDots">
+                <circle class="map-dot" data-region="na" cx="636" cy="109" r="8" fill="var(--mds-color-deep-blue-900)" aria-label="New York" />
+                <circle class="map-dot" data-region="na" cx="642" cy="106" r="8" fill="var(--mds-color-deep-blue-900)" aria-label="Boston" />
+                <circle class="map-dot" data-region="na" cx="612" cy="125" r="8" fill="var(--mds-color-deep-blue-900)" aria-label="Atlanta" />
+                <circle class="map-dot" data-region="na" cx="604" cy="107" r="8" fill="var(--mds-color-deep-blue-900)" aria-label="Chicago" />
+                <circle class="map-dot" data-region="na" cx="630" cy="111" r="8" fill="var(--mds-color-deep-blue-900)" aria-label="Newark" />
+                <circle class="map-dot" data-region="apac" cx="571" cy="137" r="8" fill="var(--mds-color-deep-blue-900)" aria-label="Gurugram/Delhi" />
+                <circle class="map-dot" data-region="emea" cx="432" cy="89" r="8" fill="var(--mds-color-deep-blue-900)" aria-label="Prague" />
+                <circle class="map-dot" data-region="latam" cx="213" cy="178" r="8" fill="var(--mds-color-deep-blue-900)" aria-label="San José" />
+              </g>
+            </svg>
+            <p class="map-cities">New York, Boston, Atlanta, Chicago, Newark, Gurugram/Delhi, Prague, San José</p>
+          </div>
+        </div>
+        <div class="region-stats" id="regionStats">
+          <table class="region-table">
+            <thead>
+              <tr>
+                <th>Region</th>
+                <th>People</th>
+                <th>Cities</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>North America</td>
+                <td id="stat-na-people">180</td>
+                <td id="stat-na-cities">25 cities</td>
+              </tr>
+              <tr>
+                <td>Asia-Pacific</td>
+                <td id="stat-apac-people">59</td>
+                <td id="stat-apac-cities">3 cities</td>
+              </tr>
+              <tr>
+                <td>EMEA</td>
+                <td id="stat-emea-people">70</td>
+                <td id="stat-emea-cities">16 cities</td>
+              </tr>
+              <tr>
+                <td>Latin America</td>
+                <td id="stat-latam-people">20</td>
+                <td id="stat-latam-cities">4 cities</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 9: Commit -->
+    <section id="commit" class="section">
+      <div class="section__inner">
+        <h2 class="section__title">Your Commitment Moment</h2>
+        <p class="section__lead">This isn't about tool adoption. It's about changing how you work — outcome by outcome. Change at least one workflow. That's the bar.</p>
+        <div class="commit-steps">
+          <div class="commit-step">
+            <span class="commit-step__num">1</span>
+            <div>
+              <h3 class="commit-step__title">Pick One Workflow</h3>
+              <p class="commit-step__text">Define 1 workflow you will change using AI this quarter</p>
+            </div>
+          </div>
+          <div class="commit-step">
+            <span class="commit-step__num">2</span>
+            <div>
+              <h3 class="commit-step__title">Bring Real Work</h3>
+              <p class="commit-step__text">Come with actual PM challenges — not hypotheticals</p>
+            </div>
+          </div>
+          <div class="commit-step">
+            <span class="commit-step__num">3</span>
+            <div>
+              <h3 class="commit-step__title">Share What Works</h3>
+              <p class="commit-step__text">Tell us what changed and what didn't. Build the playbook together.</p>
+            </div>
+          </div>
+        </div>
+        <a href="#intro" class="btn btn--primary btn--lg">Get Started</a>
+        <p class="commit__contact">Questions? Reach out to the AI Enablement team. We're here to help.</p>
+      </div>
+    </section>
+
+    <!-- Section 10: Impact -->
+    <section id="impact" class="section">
+      <div class="section__inner">
+        <h2 class="section__title">From Sessions to Scaled Impact</h2>
+        <p class="section__lead">What works in sessions doesn't stay in sessions. We capture, refine, and scale what works.</p>
+        <div class="impact-flow">
+          <div class="impact-step">
+            <h3 class="impact-step__title">Captured</h3>
+            <p class="impact-step__text">Prompts, workflows, and quality bars from sessions are documented and collected.</p>
+          </div>
+          <div class="impact-step">
+            <h3 class="impact-step__title">Refined</h3>
+            <p class="impact-step__text">Best practices are tested, improved, and validated by the PM community.</p>
+          </div>
+          <div class="impact-step">
+            <h3 class="impact-step__title">Embedded</h3>
+            <p class="impact-step__text">Proven patterns are integrated into AI-DLC for organization-wide access.</p>
+          </div>
+        </div>
+        <div class="callout callout--highlight">
+          <h3 class="callout__title">AI-DLC: Our AI-Native PM Toolkit</h3>
+          <p class="callout__text">AI-DLC is where AI-native PM work becomes durable and reusable. It's our shared library of prompts, workflows, and best practices that grows with every session.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/ai-superpower.js"></script>
+</body>
+</html>

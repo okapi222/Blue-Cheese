@@ -1,16 +1,21 @@
 ---
 name: badge-variant-selection
-description: Determines whether to use outline or fill badge variants based on their relationship to buttons in organizing units. Use when implementing badges alongside buttons in tables, cards, widgets, or other UI components.
+description: Determines badgeStyle usage and header badge sizing in MDS. Use when implementing badges in tables with actions, card/widget headers, or section titles where badge text should match adjacent heading size.
 ---
 
 # Badge Variant Selection
 
 ## Core Rule
 
-Badge variant selection depends on whether the badge shares an organizing unit with a button:
+Badge style selection depends on whether the badge shares an organizing unit with a button:
 
-- **Outline variant**: Badge is in the SAME organizing unit as a button
-- **Fill variant**: Badge is NOT in the same organizing unit as a button
+- **React path**: use `badgeStyle="outlined"` in rows/units with action buttons, otherwise `badgeStyle="filled"`.
+- **Vanilla path**: use CSS classes like `badge--outlined` in rows/units with action buttons, otherwise `badge--filled`.
+
+## Framework Mapping
+
+- **React (`@ui`)**: `<Badge variant="success" badgeStyle="outlined">Active</Badge>`
+- **Vanilla (HTML/CSS)**: `<span class="badge badge--success badge--outlined">Active</span>`
 
 ## Organizing Units
 
@@ -24,18 +29,30 @@ An organizing unit is a distinct visual container or grouping that holds related
 
 ## Examples
 
-### ✅ Use Outline Variant (Same Organizing Unit)
+### ✅ Use Outlined Style (Same Organizing Unit)
 
-**Table row with badge and action buttons:**
+**React example (table row with badge and action buttons):**
 ```tsx
 <tr>
   <td>Project Alpha</td>
   <td>
-    <Badge variant="outline-success">Active</Badge>
+    <Badge variant="success" badgeStyle="outlined">Active</Badge>
   </td>
   <td className="table-actions">
     <Button variant="tertiary" size="sm">View</Button>
     <Button variant="tertiary" size="sm">Edit</Button>
+  </td>
+</tr>
+```
+
+**Vanilla equivalent:**
+```html
+<tr>
+  <td>Project Alpha</td>
+  <td><span class="badge badge--success badge--outlined">Active</span></td>
+  <td class="table-actions">
+    <button class="btn btn--tertiary btn--sm">View</button>
+    <button class="btn btn--tertiary btn--sm">Edit</button>
   </td>
 </tr>
 ```
@@ -45,7 +62,7 @@ An organizing unit is a distinct visual container or grouping that holds related
 <Card>
   <div className="card-header">
     <h3>User Profile</h3>
-    <Badge variant="outline-warning">Pending</Badge>
+    <Badge variant="warning" badgeStyle="outlined">Pending</Badge>
   </div>
   <div className="card-body">
     <p>User information...</p>
@@ -61,7 +78,7 @@ An organizing unit is a distinct visual container or grouping that holds related
 <div className="widget">
   <div className="widget-header">
     <h3>System Status</h3>
-    <Badge variant="outline-success">Online</Badge>
+    <Badge variant="success" badgeStyle="outlined">Online</Badge>
     <Button variant="tertiary" size="sm">Refresh</Button>
   </div>
   <div className="widget-content">
@@ -70,15 +87,24 @@ An organizing unit is a distinct visual container or grouping that holds related
 </div>
 ```
 
-### ✅ Use Fill Variant (Different Organizing Units)
+### ✅ Use Filled Style (Different Organizing Units)
 
-**Table with badges but no action buttons in rows:**
+**React example (table row without action buttons):**
 ```tsx
 <tr>
   <td>Project Beta</td>
   <td>
-    <Badge variant="success">Completed</Badge>
+    <Badge variant="success" badgeStyle="filled">Completed</Badge>
   </td>
+  <td>2025-02-11</td>
+</tr>
+```
+
+**Vanilla equivalent:**
+```html
+<tr>
+  <td>Project Beta</td>
+  <td><span class="badge badge--success badge--filled">Completed</span></td>
   <td>2025-02-11</td>
 </tr>
 ```
@@ -88,11 +114,11 @@ An organizing unit is a distinct visual container or grouping that holds related
 <ul className="status-list">
   <li>
     <span>Service A</span>
-    <Badge variant="success">Running</Badge>
+    <Badge variant="success" badgeStyle="filled">Running</Badge>
   </li>
   <li>
     <span>Service B</span>
-    <Badge variant="danger">Stopped</Badge>
+    <Badge variant="error" badgeStyle="filled">Stopped</Badge>
   </li>
 </ul>
 ```
@@ -102,7 +128,7 @@ An organizing unit is a distinct visual container or grouping that holds related
 <div className="dashboard">
   <Card>
     <h3>Status Overview</h3>
-    <Badge variant="success">All Systems Operational</Badge>
+    <Badge variant="success" badgeStyle="filled">All Systems Operational</Badge>
   </Card>
   
   <Card>
@@ -112,29 +138,51 @@ An organizing unit is a distinct visual container or grouping that holds related
 </div>
 ```
 
+## Header Badge Sizing Rule
+
+When a badge appears beside a heading/title, match the badge font-size to the adjacent heading text.
+
+```css
+.section-title {
+  font-size: 1.4em;
+}
+
+.section-header .ui-Badge {
+  font-size: 1.4em;
+}
+```
+
+```css
+/* Vanilla equivalent */
+.section-header .badge {
+  font-size: 1.4em;
+}
+```
+
 ## Decision Flow
 
 When implementing a badge:
 
 1. **Identify the organizing unit** - What container holds this badge? (row, card, widget, etc.)
 2. **Check for buttons** - Are there any buttons within the SAME organizing unit?
-3. **Select variant**:
-   - Buttons in same unit → `outline` variant
-   - No buttons in same unit → `fill` variant
+3. **Select style**:
+   - Buttons in same unit → React: `badgeStyle="outlined"` / Vanilla: `badge--outlined`
+   - No competing buttons → React: `badgeStyle="filled"` / Vanilla: `badge--filled`
+4. **If badge is next to a title**, match badge font-size to that title in scoped CSS
 
 ## Common Patterns
 
 ### Table Rows
-- **With action column**: Use `outline` variants for status badges
-- **Without action column**: Use `fill` variants for status badges
+- **With action column**: use outlined style (`badgeStyle="outlined"` or `badge--outlined`)
+- **Without action column**: use filled style (`badgeStyle="filled"` or `badge--filled`)
 
 ### Cards
-- **With card actions**: Use `outline` variants for status badges
-- **Without card actions**: Use `fill` variants for status badges
+- **With card actions**: prefer outlined style when badges compete with actions
+- **Without card actions**: use filled style
 
 ### Dashboard Widgets
-- **With widget controls**: Use `outline` variants
-- **Display-only widgets**: Use `fill` variants
+- **With widget controls**: use outlined style
+- **Display-only widgets**: use filled style
 
 ## Why This Matters
 

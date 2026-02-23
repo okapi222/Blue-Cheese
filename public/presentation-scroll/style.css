@@ -1,0 +1,295 @@
+:root {
+  --page-bg: var(--mds-color-neutral-2, #f6f7f9);
+  --surface: var(--mds-color-white, #ffffff);
+  --surface-muted: var(--mds-color-neutral-3, #eef2f6);
+  --text: var(--mds-color-text-default, #1b1d21);
+  --text-muted: var(--mds-color-text-subtle, #5f6670);
+  --border: var(--mds-color-border-default, #d7dce3);
+  --brand: var(--mds-color-electric-blue-500, #2251ff);
+  --brand-soft: var(--mds-color-electric-blue-5, #ebf0ff);
+  --shadow: var(--mds-elevation-2, 0 8px 24px rgba(6, 20, 41, 0.1));
+  --radius: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--mds-font-body, "Segoe UI", Arial, sans-serif);
+  color: var(--text);
+  background: var(--page-bg);
+}
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.section-nav {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0.8rem 1rem;
+}
+
+.section-nav__link {
+  text-decoration: none;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+}
+
+.section-nav__link.is-active {
+  color: var(--surface);
+  background: var(--brand);
+  border-color: var(--brand);
+}
+
+.slide {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 6rem 1.2rem 2.8rem;
+}
+
+.slide--light {
+  background: var(--surface);
+}
+
+.slide--dark {
+  background: var(--surface-muted);
+}
+
+.slide__content {
+  width: min(1080px, 100%);
+}
+
+#title .slide__content,
+#pie-charts .slide__content {
+  text-align: center;
+}
+
+.pill {
+  display: inline-block;
+  border-radius: 999px;
+  border: 1px solid var(--brand);
+  color: var(--brand);
+  background: var(--brand-soft);
+  padding: 0.3rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: var(--mds-font-weight-medium, 500);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  margin: 0;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.hero-title span:first-child {
+  font-family: var(--mds-font-display);
+  font-size: 2.75rem;
+  font-weight: var(--mds-font-weight-bold, 700);
+  color: var(--text);
+}
+
+.hero-title span:last-child {
+  font-family: var(--mds-font-body);
+  font-size: 1.2rem;
+  font-weight: var(--mds-font-weight-medium, 500);
+  color: var(--text-muted);
+}
+
+.slide-title {
+  margin: 0;
+  font-family: var(--mds-font-display);
+  font-size: 2.75rem;
+  font-weight: var(--mds-font-weight-bold, 700);
+}
+
+.hero-subtitle,
+.slide-subtitle {
+  margin: 0.8rem 0 0;
+  font-family: var(--mds-font-body);
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.hero-body {
+  margin: 1rem auto 0;
+  max-width: 760px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1.4rem;
+  border-radius: 10px;
+  text-decoration: none;
+  background: var(--brand);
+  color: var(--surface);
+  padding: 0.8rem 1.3rem;
+  font-weight: var(--mds-font-weight-medium, 500);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.lift-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.content-card h3,
+.pie-card h3 {
+  margin: 0;
+}
+
+.content-card p {
+  margin: 0.7rem 0 0;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.pie-grid {
+  margin-top: 1.3rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.pie-card {
+  display: grid;
+  justify-items: center;
+  text-align: left;
+}
+
+.pie {
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  margin-top: 0.8rem;
+}
+
+/* 
+ * Solid chart colors only: no gradients or faded fills.
+ * Using MDS data visualization categorical palette (3-category and 4-category)
+ */
+.pie--one {
+  background: conic-gradient(
+    var(--mds-color-deep-blue-900) 0 45%,
+    var(--mds-color-cyan-500) 45% 75%,
+    var(--mds-color-electric-blue-500) 75% 100%
+  );
+}
+
+.pie--two {
+  background: conic-gradient(
+    var(--mds-color-electric-blue-900) 0 50%,
+    var(--mds-color-cyan-500) 50% 70%,
+    var(--mds-color-electric-blue-500) 70% 85%,
+    var(--mds-color-crimson-red-300) 85% 100%
+  );
+}
+
+.legend {
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text-muted);
+  display: grid;
+  gap: 0.45rem;
+  width: 100%;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.legend-swatch {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 3px;
+  flex: 0 0 auto;
+}
+
+/* Legend colors matching MDS data visualization categorical palette */
+.legend-swatch--blue { background: var(--mds-color-deep-blue-900); }
+.legend-swatch--green { background: var(--mds-color-cyan-500); }
+.legend-swatch--orange { background: var(--mds-color-electric-blue-500); }
+.legend-swatch--purple { background: var(--mds-color-electric-blue-900); }
+.legend-swatch--teal { background: var(--mds-color-cyan-500); }
+.legend-swatch--pink { background: var(--mds-color-electric-blue-500); }
+.legend-swatch--gray { background: var(--mds-color-crimson-red-300); }
+
+.flow-chart {
+  margin-top: 1.4rem;
+  display: grid;
+  justify-items: center;
+}
+
+.flow-node {
+  min-width: 220px;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  font-weight: var(--mds-font-weight-medium, 500);
+  box-shadow: var(--shadow);
+}
+
+.flow-arrow {
+  font-size: 1.5rem;
+  color: var(--brand);
+  line-height: 1;
+  margin: 0.2rem 0;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 420ms ease, transform 420ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 920px) {
+  .grid-3,
+  .pie-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .slide {
+    min-height: auto;
+    padding-top: 5.2rem;
+  }
+}

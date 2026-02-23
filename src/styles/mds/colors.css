@@ -64,6 +64,7 @@
   /* ============================================
      DATA VISUALIZATION - ELECTRIC BLUE SCALE
      ============================================ */
+  --mds-color-electric-blue-200: #c5d3ff;
   --mds-color-electric-blue-300: #a2b8ff;
   --mds-color-electric-blue-400: #6285ff;
   /* --mds-color-electric-blue-500: defined in Core Brand */
@@ -75,6 +76,7 @@
   /* ============================================
      DATA VISUALIZATION - CYAN SCALE
      ============================================ */
+  --mds-color-cyan-200: #99e6ff;
   --mds-color-cyan-300: #80d4f9;
   --mds-color-cyan-400: #40bff7;
   /* --mds-color-cyan-500: defined in Core Brand */
@@ -93,6 +95,7 @@
   --mds-color-marine-green-600: #259684;
   --mds-color-marine-green-700: #1c7063;
   --mds-color-marine-green-800: #124b42;
+  --mds-color-marine-green-900: #108980;
 
   /* ============================================
      DATA VISUALIZATION - AMBER YELLOW SCALE
@@ -115,6 +118,7 @@
   --mds-color-orchid-pink-600: #ba69a2;
   --mds-color-orchid-pink-700: #8c4f7a;
   --mds-color-orchid-pink-800: #5d3451;
+  --mds-color-orchid-pink-900: #9c217d;
 
   /* ============================================
      DATA VISUALIZATION - CRIMSON RED SCALE
@@ -125,24 +129,30 @@
   --mds-color-crimson-red-600: #b80000;
   --mds-color-crimson-red-700: #8a0000;
   --mds-color-crimson-red-800: #5c0000;
+  --mds-color-crimson-red-900: #5c0000;
 
- /* ============================================
+  /* ============================================
+     SAND NEUTRAL SCALE (for diverging breakpoints)
+     ============================================ */
+  --mds-color-sand-neutral-300: #f5f0e8;
+
+  /* ============================================
      FEEDBACK
      ============================================ */
 
-     /* Light backgrounds */
-     --mds-color-informational-light: #E5F0FF;
-     --mds-color-feedback-success-light: #E6FEE8;
-     --mds-color-feedback-warning-light: #FFF9D6;
-     --mds-color-feedback-danger-light: #FEEBEB;
-     --mds-color-feedback-neutral-light: #F2F2F2;
+  /* Light backgrounds */
+  --mds-color-informational-light: #E5F0FF;
+  --mds-color-feedback-success-light: #E6FEE8;
+  --mds-color-feedback-warning-light: #FFF9D6;
+  --mds-color-feedback-danger-light: #FEEBEB;
+  --mds-color-feedback-neutral-light: #F2F2F2;
 
-     /* Primary feedback colors */
-     --mds-color-informational: #2251FF;
-     --mds-color-feedback-success: #117E1A;
-     --mds-color-feedback-warning: #FFD048;
-     --mds-color-feedback-danger: #CD3030;
-     --mds-color-feedback-neutral: #333333;
+  /* Primary feedback colors */
+  --mds-color-informational: #2251FF;
+  --mds-color-feedback-success: #117E1A;
+  --mds-color-feedback-warning: #FFD048;
+  --mds-color-feedback-danger: #CD3030;
+  --mds-color-feedback-neutral: #333333;
 
 
 

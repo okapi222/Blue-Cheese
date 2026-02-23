@@ -171,9 +171,13 @@
   height: 48px;
 }
 
+/* 
+ * Mini chart bars using MDS data visualization palette
+ * Single-category chart uses Deep Blue 900
+ */
 .mini-chart .chart-bar {
   flex: 1;
-  background-color: var(--mds-color-electric-blue-500); /* Solid color - no gradients */
+  background-color: var(--mds-color-deep-blue-900); /* Solid color - no gradients */
   border-radius: 2px 2px 0 0;
   min-height: 4px;
   transition: opacity 0.2s ease;
@@ -195,9 +199,13 @@
   overflow: hidden;
 }
 
+/* 
+ * Progress bar fill using MDS data visualization palette
+ * Single-category visualization uses Deep Blue 900
+ */
 .progress-fill {
   height: 100%;
-  background-color: var(--mds-color-electric-blue-500); /* Solid color - no gradients */
+  background-color: var(--mds-color-deep-blue-900); /* Solid color - no gradients */
   border-radius: 4px;
   transition: width 0.3s ease;
 }
@@ -237,12 +245,17 @@
   border-radius: 50%;
 }
 
+/* 
+ * Legend colors using MDS data visualization categorical palette
+ * Grouped bar chart with 2 categories uses first 2 colors from categorical palette
+ * Actual = Deep Blue 900, Target = Cyan 500
+ */
 .legend-dot--primary {
-  background-color: var(--mds-color-electric-blue-500);
+  background-color: var(--mds-color-deep-blue-900);
 }
 
 .legend-dot--secondary {
-  background-color: var(--mds-color-neutral-gray-300);
+  background-color: var(--mds-color-cyan-500);
 }
 
 .revenue-chart {
@@ -274,12 +287,18 @@
   transition: opacity 0.2s ease;
 }
 
+/* 
+ * Grouped bar chart colors using MDS data visualization categorical palette
+ * 2-category chart uses first 2 colors from categorical palette
+ * Actual = Deep Blue 900 (1st color)
+ * Target = Cyan 500 (2nd color)
+ */
 .chart-bar-actual {
-  background-color: var(--mds-color-electric-blue-500); /* Solid color - no gradients */
+  background-color: var(--mds-color-deep-blue-900); /* Solid color - no gradients */
 }
 
 .chart-bar-target {
-  background-color: var(--mds-color-neutral-gray-300);
+  background-color: var(--mds-color-cyan-500);
 }
 
 .chart-bar-actual:hover,
@@ -439,9 +458,13 @@
   overflow: hidden;
 }
 
+/* 
+ * Completion progress bar using MDS data visualization palette
+ * Single-category visualization uses Deep Blue 900
+ */
 .completion-fill {
   height: 100%;
-  background-color: var(--mds-color-feedback-success);
+  background-color: var(--mds-color-deep-blue-900);
   border-radius: 2px;
   transition: width 0.3s ease;
 }
